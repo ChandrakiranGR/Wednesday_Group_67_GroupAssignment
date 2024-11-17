@@ -3,8 +3,7 @@ package model.ProductManagement;
 import java.util.ArrayList;
 
 /**
- * ProductsReport class - Updated with enhanced functionality
- * Author: Your Name
+ * ProductsReport class - Updated with simulation functionality
  */
 public class ProductsReport {
 
@@ -42,8 +41,6 @@ public class ProductsReport {
         return productsAlwaysAboveTarget;
     }
 
-    // ===== New Methods Added Below =====
-
     /**
      * Generate a comprehensive report displaying product performance
      */
@@ -71,6 +68,24 @@ public class ProductsReport {
         for (ProductSummary ps : productSummaryList) {
             System.out.println(ps.generateProductSummaryReport());
         }
+    }
+
+    /**
+     * Generate a simulation report displaying the impact of adjusted prices.
+     */
+    public void generateSimulationReport() {
+        System.out.println("===== Simulation Report =====");
+        System.out.printf("%-20s %-10s %-10s %-10s%n",
+                          "Product Name", "Old Revenue", "New Revenue", "Impact");
+        for (ProductSummary ps : productSummaryList) {
+            Product product = ps.getSubjectProduct();
+            double oldRevenue = ps.getSalesRevenues();
+            double newRevenue = product.calculateRevenue();
+            double impact = newRevenue - oldRevenue;
+            System.out.printf("%-20s %-10.2f %-10.2f %-10.2f%n",
+                              product.getName(), oldRevenue, newRevenue, impact);
+        }
+        System.out.println("=============================");
     }
 
     /**
