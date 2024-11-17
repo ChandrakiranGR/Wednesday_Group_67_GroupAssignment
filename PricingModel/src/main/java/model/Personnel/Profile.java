@@ -1,35 +1,39 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package model.Personnel;
 
 import java.util.ArrayList;
 
 /**
- *
- * @author kal bugrara
+ * Profile class - Updated to enhance compatibility and functionality
  */
 public abstract class Profile {
-    Person person;
-     public Profile(Person p){
-        person = p;
-        
+    private Person person; // Updated to private for encapsulation
+
+    // Constructor
+    public Profile(Person p) {
+        this.person = p;
     }
-    
-     public abstract String getRole();
-    
-    public Person getPerson(){
+
+    // Abstract method to be implemented by subclasses
+    public abstract String getRole();
+
+    // Getter for Person
+    public Person getPerson() {
         return person;
     }
-     
 
-        public boolean isMatch(String id) {
-        if (person.getPersonId().equals(id)) {
-            return true;
-        }
-        return false;
+    // Setter for Person (optional, for flexibility)
+    public void setPerson(Person person) {
+        this.person = person;
     }
 
+    // Match by Person ID
+    public boolean isMatch(String id) {
+        return person.getPersonId().equals(id);
+    }
+
+    // Generate a profile summary
+    public String generateProfileSummary() {
+        return String.format("Profile Role: %s, Full Name: %s, ID: %s",
+                             getRole(), person.getFullName(), person.getPersonId());
+    }
 }

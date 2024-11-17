@@ -1,42 +1,37 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package model.Personnel;
 
 import java.util.ArrayList;
 
 /**
- *
- * @author kal bugrara
+ * PersonDirectory class - Updated to align with Person constructor
  */
 public class PersonDirectory {
-    
-      ArrayList<Person> personlist ;
-    
-      public PersonDirectory (){
-          
-       personlist = new ArrayList();
 
+    private ArrayList<Person> personList;
+
+    public PersonDirectory() {
+        personList = new ArrayList<>();
     }
 
-    public Person newPerson(String id) {
-
-        Person p = new Person(id);
-        personlist.add(p);
+    // Updated method to create a new person
+    public Person newPerson(String id, String firstName, String lastName) {
+        Person p = new Person(id, firstName, lastName);
+        personList.add(p);
         return p;
     }
 
+    // Find a person by ID
     public Person findPerson(String id) {
-
-        for (Person p : personlist) {
-
+        for (Person p : personList) {
             if (p.isMatch(id)) {
                 return p;
             }
         }
-            return null; //not found after going through the whole list
-         }
-    
+        return null; // Not found after searching the entire list
+    }
+
+    // Getter for personList (optional)
+    public ArrayList<Person> getPersonList() {
+        return personList;
+    }
 }
