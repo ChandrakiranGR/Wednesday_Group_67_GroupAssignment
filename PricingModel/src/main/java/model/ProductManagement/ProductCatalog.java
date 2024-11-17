@@ -3,7 +3,7 @@ package model.ProductManagement;
 import java.util.ArrayList;
 
 /**
- * ProductCatalog class - Adjust Target Prices and Run Simulation
+ * ProductCatalog class - Adjust Target Prices, Run Simulation, and Maximize Profit Margins
  */
 public class ProductCatalog {
 
@@ -85,5 +85,36 @@ public class ProductCatalog {
             totalRevenue += product.calculateRevenue();
         }
         return totalRevenue;
+    }
+
+    /**
+     * Optimize profit margins by iteratively adjusting target prices
+     * and running revenue simulations.
+     *
+     * @param percentage Percentage to adjust the target price
+     * @param threshold Minimum revenue increase threshold to stop optimization
+     */
+    public void optimizeProfitMargins(double percentage, double threshold) {
+        double previousRevenue = 0.0;
+        double currentRevenue = simulateTotalRevenue();
+
+        System.out.println("Initial Revenue: $" + currentRevenue);
+
+        while ((currentRevenue - previousRevenue) > threshold) {
+            for (Product product : products) {
+                // Adjust prices based on sales performance
+                if (product.getNumberOfProductSalesBelowTarget() > 0) {
+                    product.decreaseTargetPrice(percentage);
+                } else if (product.getNumberOfProductSalesAboveTarget() > 0) {
+                    product.increaseTargetPrice(percentage);
+                }
+            }
+
+            previousRevenue = currentRevenue;
+            currentRevenue = simulateTotalRevenue();
+            System.out.println("Adjusted Revenue: $" + currentRevenue);
+        }
+
+        System.out.println("Optimization Complete. Final Revenue: $" + currentRevenue);
     }
 }
