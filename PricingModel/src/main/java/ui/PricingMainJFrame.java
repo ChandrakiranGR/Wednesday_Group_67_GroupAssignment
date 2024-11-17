@@ -213,6 +213,7 @@ public class PricingMainJFrame extends javax.swing.JFrame {
         });
     }
 
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel CardSequencePanel;
     private javax.swing.JTextField PasswordTextField;
