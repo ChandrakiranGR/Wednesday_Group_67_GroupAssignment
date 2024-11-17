@@ -145,6 +145,10 @@ public class Product {
         this.targetPrice = this.ceilingPrice;
     }
 }
+    public double calculateRevenue() {
+    return this.getSalesVolume() * this.getTargetPrice();
+}
+
 
 
 

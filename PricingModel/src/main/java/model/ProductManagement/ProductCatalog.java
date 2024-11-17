@@ -3,7 +3,7 @@ package model.ProductManagement;
 import java.util.ArrayList;
 
 /**
- * ProductCatalog class - Adjust Target Prices
+ * ProductCatalog class - Adjust Target Prices and Run Simulation
  */
 public class ProductCatalog {
 
@@ -72,5 +72,18 @@ public class ProductCatalog {
                 System.out.println("Target price increased for product: " + product.getName());
             }
         }
+    }
+
+    /**
+     * Simulate the total revenue generated for all products.
+     *
+     * @return Total simulated revenue
+     */
+    public double simulateTotalRevenue() {
+        double totalRevenue = 0.0;
+        for (Product product : products) {
+            totalRevenue += product.calculateRevenue();
+        }
+        return totalRevenue;
     }
 }
