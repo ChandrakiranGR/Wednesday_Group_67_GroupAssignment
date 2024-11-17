@@ -3,7 +3,7 @@ package model.ProductManagement;
 import java.util.ArrayList;
 
 /**
- * ProductsReport class - Updated with simulation functionality
+ * ProductsReport class - Updated with optimization functionality
  */
 public class ProductsReport {
 
@@ -68,6 +68,23 @@ public class ProductsReport {
         for (ProductSummary ps : productSummaryList) {
             System.out.println(ps.generateProductSummaryReport());
         }
+    }
+
+    /**
+     * Generate an optimization report displaying the final prices and revenue impact.
+     */
+    public void generateOptimizationReport() {
+        System.out.println("===== Optimization Report =====");
+        System.out.printf("%-20s %-10s %-10s %-10s%n",
+                          "Product Name", "Final Price", "Final Revenue", "Performance Impact");
+        for (ProductSummary ps : productSummaryList) {
+            Product product = ps.getSubjectProduct();
+            double finalRevenue = product.calculateRevenue();
+            double pricePerformance = product.getOrderPricePerformance();
+            System.out.printf("%-20s %-10.2f %-10.2f %-10.2f%n",
+                              product.getName(), product.getTargetPrice(), finalRevenue, pricePerformance);
+        }
+        System.out.println("================================");
     }
 
     /**
