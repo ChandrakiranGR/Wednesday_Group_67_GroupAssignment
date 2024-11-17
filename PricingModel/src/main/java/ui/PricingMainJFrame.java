@@ -111,6 +111,7 @@ public class PricingMainJFrame extends javax.swing.JFrame {
 
         SplitHomeArea.setLeftComponent(actionsidejpanel);
 
+        CardSequencePanel.setBackground(java.awt.Color.white);
         CardSequencePanel.setLayout(new java.awt.CardLayout());
         SplitHomeArea.setRightComponent(CardSequencePanel);
 
