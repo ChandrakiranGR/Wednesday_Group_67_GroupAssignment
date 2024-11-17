@@ -55,7 +55,7 @@ public class SalesPersonJPanel extends javax.swing.JPanel {
         lblCustomer.setText("Customer");
 
         txtCustomer.setBackground(java.awt.Color.lightGray);
-        txtCustomer.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        txtCustomer.setBorder(null);
         txtCustomer.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtCustomerActionPerformed(evt);
@@ -100,7 +100,7 @@ public class SalesPersonJPanel extends javax.swing.JPanel {
                     .addComponent(btnSReviewComm, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(btnSPerformance, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(163, Short.MAX_VALUE))
+                .addContainerGap(167, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
