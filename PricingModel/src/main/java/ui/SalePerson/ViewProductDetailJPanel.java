@@ -14,7 +14,7 @@ public class ViewProductDetailJPanel extends javax.swing.JPanel {
     JPanel userProcessContainer;
     Product product;
 
-    /** Creates new form CreateProductJPanel */
+    
     ViewProductDetailJPanel(JPanel userProcessContainer, Product product) {
          initComponents();
          this.userProcessContainer = userProcessContainer;
