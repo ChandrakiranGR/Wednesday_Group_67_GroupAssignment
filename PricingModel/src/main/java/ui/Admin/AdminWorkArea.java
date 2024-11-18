@@ -21,7 +21,7 @@ import model.Supplier.SupplierDirectory;
 
 /**
  *
- * @author prart
+ * @author vish
  */
 public class AdminWorkArea extends javax.swing.JPanel {
     JPanel mainWorkArea;
