@@ -29,11 +29,11 @@ public class salesPersonProfile extends javax.swing.JPanel {
      */
     
 
-    public salesPersonProfile(JPanel userProcessContainer, Business business, SalesPersonProfile sp) {
+    public salesPersonProfile(JPanel userProcessContainer, Business business, SalesPersonProfile salesPersonProfile) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.business = business;
-        this.salesPersonProfile = sp;
+        this.salesPersonProfile = salesPersonProfile;
         populateCombo();
     }
      

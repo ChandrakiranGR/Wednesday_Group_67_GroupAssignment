@@ -119,13 +119,13 @@ public class NewCustomerJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
         PersonDirectory pd = business.getPersonDirectory() ;
         if(txtName.getText().isBlank()){
-            JOptionPane.showMessageDialog(this, "Please Enter Customer Name");
+            JOptionPane.showMessageDialog(this, "Please enter customer name");
             return;
         }
         Person person = pd.newPerson(txtName.getText().toString());
         business.getCustomerDirectory().newCustomerProfile(person);
         clearFields();
-        JOptionPane.showMessageDialog(this, "New Customer information is saved");
+        JOptionPane.showMessageDialog(this, "New customer information is saved");
     }//GEN-LAST:event_btnAddActionPerformed
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
