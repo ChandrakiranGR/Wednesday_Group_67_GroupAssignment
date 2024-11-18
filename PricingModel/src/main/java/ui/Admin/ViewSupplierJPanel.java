@@ -9,16 +9,16 @@ import model.Supplier.Supplier;
 
 /**
  *
- * @author Mihir Mehta / Hechen Gao
+ * @author vish
  */
 public class ViewSupplierJPanel extends javax.swing.JPanel {
 
     private JPanel userProcessContainer;
     private Supplier supplier;
     
-    public ViewSupplierJPanel(JPanel upc, Supplier s) {
+    public ViewSupplierJPanel(JPanel controller, Supplier s) {
         initComponents();
-        userProcessContainer = upc;
+        userProcessContainer = controller;
         supplier = s;
         lblSupplierName.setText(s.getName());
         refreshTable();
@@ -49,9 +49,12 @@ public class ViewSupplierJPanel extends javax.swing.JPanel {
         productCatalog = new javax.swing.JTable();
         btnBack = new javax.swing.JButton();
 
-        lblSupplierName.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        lblSupplierName.setText("<Supplier Name>");
+        setBackground(new java.awt.Color(219, 247, 255));
 
+        lblSupplierName.setFont(new java.awt.Font("Noto Sans Batak", 0, 18)); // NOI18N
+        lblSupplierName.setText("Supplier Name...");
+
+        productCatalog.setFont(new java.awt.Font("Noto Sans Batak", 0, 12)); // NOI18N
         productCatalog.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
@@ -73,7 +76,8 @@ public class ViewSupplierJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(productCatalog);
 
-        btnBack.setText("<< Back");
+        btnBack.setFont(new java.awt.Font("Noto Sans Batak", 0, 12)); // NOI18N
+        btnBack.setText("Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
@@ -86,24 +90,24 @@ public class ViewSupplierJPanel extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(26, 26, 26)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 588, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 588, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(btnBack)
                         .addGap(18, 18, 18)
-                        .addComponent(lblSupplierName, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(lblSupplierName, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(28, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(28, 28, 28)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnBack)
-                    .addComponent(lblSupplierName))
-                .addGap(18, 18, 18)
+                .addGap(30, 30, 30)
+                .addComponent(btnBack)
+                .addGap(51, 51, 51)
+                .addComponent(lblSupplierName)
+                .addGap(58, 58, 58)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(336, Short.MAX_VALUE))
+                .addContainerGap(219, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

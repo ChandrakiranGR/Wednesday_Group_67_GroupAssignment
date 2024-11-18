@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ui.admin;
+package ui.Admin;
 
 import model.Supplier.Supplier;
 import model.Supplier.SupplierDirectory;
@@ -24,10 +24,10 @@ public class AddSupplierJPanel extends javax.swing.JPanel {
     private JPanel userProcessContainer;
     private SupplierDirectory supplierDirectory;
     
-    public AddSupplierJPanel(JPanel upc, SupplierDirectory sd) {
+    public AddSupplierJPanel(JPanel controller, SupplierDirectory directory) {
         initComponents();
-        userProcessContainer = upc;
-        supplierDirectory = sd;
+        userProcessContainer = controller;
+        supplierDirectory = directory;
     }
 
     /**
@@ -78,7 +78,7 @@ public class AddSupplierJPanel extends javax.swing.JPanel {
 
         btnBack.setBackground(java.awt.Color.lightGray);
         btnBack.setForeground(java.awt.Color.darkGray);
-        btnBack.setText("< Back");
+        btnBack.setText("Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
@@ -108,10 +108,9 @@ public class AddSupplierJPanel extends javax.swing.JPanel {
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(btnAdd, javax.swing.GroupLayout.DEFAULT_SIZE, 159, Short.MAX_VALUE)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(txtPhone, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 159, Short.MAX_VALUE)
-                                .addComponent(txtEmail, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(txtName)))))
+                            .addComponent(txtPhone, javax.swing.GroupLayout.DEFAULT_SIZE, 159, Short.MAX_VALUE)
+                            .addComponent(txtEmail)
+                            .addComponent(txtName, javax.swing.GroupLayout.Alignment.TRAILING))))
                 .addContainerGap(246, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(

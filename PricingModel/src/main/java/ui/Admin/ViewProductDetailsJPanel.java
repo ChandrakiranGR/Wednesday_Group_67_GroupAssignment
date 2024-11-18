@@ -11,7 +11,7 @@ import model.ProductManagement.Product;
 
 /**
  *
- * @author gomathyselvamuthiah
+ * @author vish
  */
 public class ViewProductDetailsJPanel extends javax.swing.JPanel {
 
@@ -19,11 +19,10 @@ public class ViewProductDetailsJPanel extends javax.swing.JPanel {
     JPanel userProcessContainer;
     Product product;
     
-    /** Creates new form CreateProductJPanel */
-    public ViewProductDetailsJPanel(JPanel userProcessContainer, Product product) {
+    public ViewProductDetailsJPanel(JPanel controller, Product product) {
         initComponents();
         
-        this.userProcessContainer = userProcessContainer;
+        this.userProcessContainer = controller;
         this.product = product;
         
         txtProdName.setText(product.getName());
@@ -51,15 +50,17 @@ public class ViewProductDetailsJPanel extends javax.swing.JPanel {
         backButton1 = new javax.swing.JButton();
         txtFloorPrice = new javax.swing.JTextField();
 
+        setBackground(new java.awt.Color(219, 247, 255));
+
         lblFloorPrice.setText("Floor Price:");
 
         lblCeilingPrice.setText("Ceiling Price:");
 
         txtCeilingPrice.setEditable(false);
 
-        jLabel1.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Noto Sans Batak", 0, 18)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Product Details");
+        jLabel1.setText("Product Details...");
 
         jLabel2.setText("Product Name:");
 
@@ -69,8 +70,7 @@ public class ViewProductDetailsJPanel extends javax.swing.JPanel {
 
         txtTargetPrice.setEditable(false);
 
-        backButton1.setBackground(new java.awt.Color(204, 255, 204));
-        backButton1.setText("<< Back");
+        backButton1.setText("Back");
         backButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backButton1ActionPerformed(evt);
@@ -86,7 +86,10 @@ public class ViewProductDetailsJPanel extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap(186, Short.MAX_VALUE)
+                        .addGap(46, 46, 46)
+                        .addComponent(backButton1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(40, 40, 40)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(lblFloorPrice, javax.swing.GroupLayout.Alignment.TRAILING)
@@ -98,21 +101,21 @@ public class ViewProductDetailsJPanel extends javax.swing.JPanel {
                             .addComponent(txtCeilingPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                 .addComponent(txtProdName, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(txtFloorPrice, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 159, Short.MAX_VALUE))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(46, 46, 46)
-                        .addComponent(backButton1)))
-                .addContainerGap(141, Short.MAX_VALUE))
-            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(txtFloorPrice, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 257, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(1, 1, 1)))
+                .addContainerGap(287, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(27, 27, 27)
                 .addComponent(backButton1)
-                .addGap(7, 7, 7)
+                .addGap(29, 29, 29)
                 .addComponent(jLabel1)
-                .addGap(54, 54, 54)
+                .addGap(32, 32, 32)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtProdName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -128,7 +131,7 @@ public class ViewProductDetailsJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtCeilingPrice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblCeilingPrice))
-                .addContainerGap(135, Short.MAX_VALUE))
+                .addContainerGap(131, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
