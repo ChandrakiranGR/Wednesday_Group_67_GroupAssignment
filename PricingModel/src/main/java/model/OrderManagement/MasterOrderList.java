@@ -36,7 +36,6 @@ public class MasterOrderList {
     }
     
     public CurrentOrder newOrder(CustomerProfile cp, SalesPersonProfile spp, CurrentOrder order){
-//        Order o= order;
         orders.add(order);
         return order;
     }

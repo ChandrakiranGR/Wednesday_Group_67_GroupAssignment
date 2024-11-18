@@ -10,20 +10,19 @@ package model.ProductManagement;
  * @author kal bugrara
  */
 
-//this class will extract summary data from the product
 public class ProductSummary {
     Product subjectproduct;
     int numberofsalesabovetarget;
     int numberofsalesbelowtarget;
-    int productpriceperformance; //total profit above target --could be negative too
+    int productpriceperformance; 
     int acutalsalesvolume;
-    int rank; // will be done later
+    int rank; 
     
     public ProductSummary(Product p){
         
         numberofsalesabovetarget = p.getNumberOfProductSalesAboveTarget();
         productpriceperformance = p.getOrderPricePerformance();
-        subjectproduct = p; //keeps track of the product itself not as well;
+        subjectproduct = p; 
         acutalsalesvolume = p.getSalesVolume();
         numberofsalesbelowtarget = p.getNumberOfProductSalesBelowTarget();
     
@@ -42,6 +41,6 @@ public class ProductSummary {
         return numberofsalesbelowtarget;
     }            
     public boolean isProductAlwaysAboveTarget(){
-        return false; // to be implemented
+        return false;
     }
 }

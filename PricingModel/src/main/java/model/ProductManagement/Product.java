@@ -20,7 +20,7 @@ public class Product {
     private int ceilingPrice;
     private int targetPrice;
     ArrayList<OrderItem> orderitems;
-    HashMap<Integer,ProductRep> productRep;
+    HashMap<Integer,ProductDetails> productRep;
 
     public Product( int fp, int cp, int tp) {
 
@@ -47,7 +47,7 @@ public class Product {
     }
 
     public void setProductRep() {
-        ProductRep productrep = new ProductRep();
+        ProductDetails productrep = new ProductDetails();
         productrep.setAboveTargetNo(getNumberOfProductSalesAboveTarget());
         //System.out.println();
         productrep.setBelowTargetNo(getNumberOfProductSalesBelowTarget());
@@ -57,7 +57,7 @@ public class Product {
         //System.out.println(productRep.keySet());
     }
 
-    public HashMap<Integer, ProductRep> getProductRep() {
+    public HashMap<Integer, ProductDetails> getProductRep() {
         return productRep;
     }
     

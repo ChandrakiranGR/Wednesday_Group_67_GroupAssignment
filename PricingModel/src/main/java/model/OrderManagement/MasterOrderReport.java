@@ -24,14 +24,14 @@ public class MasterOrderReport {
         }         
     }
     
-    public OrderSummary getTopProfitableOrder(){ //most profitable order
+    public OrderSummary getTopProfitableOrder(){ 
         OrderSummary currenttoporder = null;
         
         for (OrderSummary os: ordersummarylist){
-            if(currenttoporder == null)currenttoporder= os; // initial step 
+            if(currenttoporder == null)currenttoporder= os;  
             else 
                 if(os.getOrderProfit()> currenttoporder.getOrderProfit()){
-                currenttoporder = os; //we have a new higher total
+                currenttoporder = os;
             }
                 }
         return currenttoporder;

@@ -38,7 +38,7 @@ public class UserAccountDirectory {
                 return ua;
             }
         }
-            return null; //not found after going through the whole list
+            return null; 
          }
      public UserAccount AuthenticateUser(String un, String pw) {
 
@@ -48,20 +48,13 @@ public class UserAccountDirectory {
                 return ua;
             }
         }
-            return null; //not found after going through the whole list
+            return null; 
          } 
      
      
-    // Added new method for listing the user accounts
     public ArrayList<UserAccount> getUserAccountList()
      {
          return useraccountlist;
      }
-
-//    public void deletePerson(UserAccount selectedperson) {
-//        
-//        useraccountlist.remove(selectedperson);
-//    
-//    }
      
 }
