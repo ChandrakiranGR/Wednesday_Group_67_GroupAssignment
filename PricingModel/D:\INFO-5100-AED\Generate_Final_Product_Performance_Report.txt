@@ -1,0 +1,550 @@
+===================================================
+Product Name: Xerox Scanner1
+Current Target Price: 2238
+Ceiling Price: 3496
+Floor Price: 980
+No. of Orders Sold above Target Price: 5
+No. of Orders Sold below Target Price: 5
+Current Product Price Performance: -42416
+===================================================
+==================== Product Performance History ===============================
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+===================================================
+Product Name: Xerox Scanner2
+Current Target Price: 1990
+Ceiling Price: 3073
+Floor Price: 908
+No. of Orders Sold above Target Price: 5
+No. of Orders Sold below Target Price: 5
+Current Product Price Performance: 54086
+===================================================
+==================== Product Performance History ===============================
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+===================================================
+Product Name: Xerox Scanner3
+Current Target Price: 1491
+Ceiling Price: 2228
+Floor Price: 754
+No. of Orders Sold above Target Price: 4
+No. of Orders Sold below Target Price: 6
+Current Product Price Performance: -11044
+===================================================
+==================== Product Performance History ===============================
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+===================================================
+Product Name: Xerox Scanner4
+Current Target Price: 2442
+Ceiling Price: 3934
+Floor Price: 950
+No. of Orders Sold above Target Price: 6
+No. of Orders Sold below Target Price: 4
+Current Product Price Performance: 14488
+===================================================
+==================== Product Performance History ===============================
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+===================================================
+Product Name: Xerox Scanner5
+Current Target Price: 2178
+Ceiling Price: 3801
+Floor Price: 555
+No. of Orders Sold above Target Price: 4
+No. of Orders Sold below Target Price: 6
+Current Product Price Performance: -144268
+===================================================
+==================== Product Performance History ===============================
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+===================================================
+Product Name: Xerox Scanner6
+Current Target Price: 2426
+Ceiling Price: 3863
+Floor Price: 990
+No. of Orders Sold above Target Price: 3
+No. of Orders Sold below Target Price: 7
+Current Product Price Performance: -83666
+===================================================
+==================== Product Performance History ===============================
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+===================================================
+Product Name: Xerox Scanner7
+Current Target Price: 2052
+Ceiling Price: 3252
+Floor Price: 852
+No. of Orders Sold above Target Price: 7
+No. of Orders Sold below Target Price: 3
+Current Product Price Performance: 201075
+===================================================
+==================== Product Performance History ===============================
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+===================================================
+Product Name: Xerox Scanner8
+Current Target Price: 2074
+Ceiling Price: 3570
+Floor Price: 579
+No. of Orders Sold above Target Price: 5
+No. of Orders Sold below Target Price: 5
+Current Product Price Performance: -184381
+===================================================
+==================== Product Performance History ===============================
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+===================================================
+Product Name: Xerox Scanner9
+Current Target Price: 2100
+Ceiling Price: 3579
+Floor Price: 622
+No. of Orders Sold above Target Price: 4
+No. of Orders Sold below Target Price: 6
+Current Product Price Performance: -32985
+===================================================
+==================== Product Performance History ===============================
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+===================================================
+Product Name: Xerox Scanner10
+Current Target Price: 1858
+Ceiling Price: 2934
+Floor Price: 783
+No. of Orders Sold above Target Price: 2
+No. of Orders Sold below Target Price: 8
+Current Product Price Performance: -192655
+===================================================
+==================== Product Performance History ===============================
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+===================================================
+Product Name: Xerox Printer1
+Current Target Price: 1843
+Ceiling Price: 2744
+Floor Price: 943
+No. of Orders Sold above Target Price: 6
+No. of Orders Sold below Target Price: 4
+Current Product Price Performance: 124577
+===================================================
+==================== Product Performance History ===============================
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+===================================================
+Product Name: Xerox Printer2
+Current Target Price: 1560
+Ceiling Price: 2177
+Floor Price: 944
+No. of Orders Sold above Target Price: 3
+No. of Orders Sold below Target Price: 7
+Current Product Price Performance: -85199
+===================================================
+==================== Product Performance History ===============================
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+===================================================
+Product Name: Xerox Printer3
+Current Target Price: 2130
+Ceiling Price: 3547
+Floor Price: 714
+No. of Orders Sold above Target Price: 5
+No. of Orders Sold below Target Price: 5
+Current Product Price Performance: -109468
+===================================================
+==================== Product Performance History ===============================
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+===================================================
+Product Name: Xerox Printer4
+Current Target Price: 2230
+Ceiling Price: 3769
+Floor Price: 691
+No. of Orders Sold above Target Price: 3
+No. of Orders Sold below Target Price: 7
+Current Product Price Performance: -92953
+===================================================
+==================== Product Performance History ===============================
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+===================================================
+Product Name: Xerox Printer5
+Current Target Price: 1367
+Ceiling Price: 2079
+Floor Price: 655
+No. of Orders Sold above Target Price: 4
+No. of Orders Sold below Target Price: 6
+Current Product Price Performance: -52318
+===================================================
+==================== Product Performance History ===============================
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+===================================================
+Product Name: Xerox Printer6
+Current Target Price: 1345
+Ceiling Price: 2180
+Floor Price: 511
+No. of Orders Sold above Target Price: 6
+No. of Orders Sold below Target Price: 4
+Current Product Price Performance: -89730
+===================================================
+==================== Product Performance History ===============================
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+===================================================
+Product Name: Xerox Printer7
+Current Target Price: 2045
+Ceiling Price: 3388
+Floor Price: 703
+No. of Orders Sold above Target Price: 7
+No. of Orders Sold below Target Price: 3
+Current Product Price Performance: 31424
+===================================================
+==================== Product Performance History ===============================
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+===================================================
+Product Name: Xerox Printer8
+Current Target Price: 1995
+Ceiling Price: 3008
+Floor Price: 983
+No. of Orders Sold above Target Price: 5
+No. of Orders Sold below Target Price: 5
+Current Product Price Performance: -44575
+===================================================
+==================== Product Performance History ===============================
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+===================================================
+Product Name: Xerox Printer9
+Current Target Price: 1490
+Ceiling Price: 2008
+Floor Price: 972
+No. of Orders Sold above Target Price: 5
+No. of Orders Sold below Target Price: 5
+Current Product Price Performance: -22341
+===================================================
+==================== Product Performance History ===============================
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+===================================================
+Product Name: Xerox Printer10
+Current Target Price: 2290
+Ceiling Price: 3782
+Floor Price: 799
+No. of Orders Sold above Target Price: 6
+No. of Orders Sold below Target Price: 4
+Current Product Price Performance: 99590
+===================================================
+==================== Product Performance History ===============================
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+===================================================
+Product Name: Xerox Copier1
+Current Target Price: 1495
+Ceiling Price: 2143
+Floor Price: 847
+No. of Orders Sold above Target Price: 5
+No. of Orders Sold below Target Price: 5
+Current Product Price Performance: 30536
+===================================================
+==================== Product Performance History ===============================
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+===================================================
+Product Name: Xerox Copier2
+Current Target Price: 1522
+Ceiling Price: 2182
+Floor Price: 862
+No. of Orders Sold above Target Price: 5
+No. of Orders Sold below Target Price: 5
+Current Product Price Performance: 32994
+===================================================
+==================== Product Performance History ===============================
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+===================================================
+Product Name: Xerox Copier3
+Current Target Price: 2326
+Ceiling Price: 3793
+Floor Price: 859
+No. of Orders Sold above Target Price: 6
+No. of Orders Sold below Target Price: 4
+Current Product Price Performance: 48714
+===================================================
+==================== Product Performance History ===============================
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+===================================================
+Product Name: Xerox Copier4
+Current Target Price: 2071
+Ceiling Price: 3500
+Floor Price: 642
+No. of Orders Sold above Target Price: 4
+No. of Orders Sold below Target Price: 6
+Current Product Price Performance: -138447
+===================================================
+==================== Product Performance History ===============================
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+===================================================
+Product Name: Xerox Copier5
+Current Target Price: 2338
+Ceiling Price: 3755
+Floor Price: 921
+No. of Orders Sold above Target Price: 2
+No. of Orders Sold below Target Price: 8
+Current Product Price Performance: -183014
+===================================================
+==================== Product Performance History ===============================
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+===================================================
+Product Name: Xerox Copier6
+Current Target Price: 1428
+Ceiling Price: 2192
+Floor Price: 664
+No. of Orders Sold above Target Price: 5
+No. of Orders Sold below Target Price: 5
+Current Product Price Performance: -16423
+===================================================
+==================== Product Performance History ===============================
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+===================================================
+Product Name: Xerox Copier7
+Current Target Price: 1461
+Ceiling Price: 2080
+Floor Price: 843
+No. of Orders Sold above Target Price: 7
+No. of Orders Sold below Target Price: 3
+Current Product Price Performance: -40661
+===================================================
+==================== Product Performance History ===============================
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+===================================================
+Product Name: Xerox Copier8
+Current Target Price: 2425
+Ceiling Price: 3965
+Floor Price: 886
+No. of Orders Sold above Target Price: 4
+No. of Orders Sold below Target Price: 6
+Current Product Price Performance: 65959
+===================================================
+==================== Product Performance History ===============================
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+===================================================
+Product Name: Xerox Copier9
+Current Target Price: 1686
+Ceiling Price: 2590
+Floor Price: 783
+No. of Orders Sold above Target Price: 4
+No. of Orders Sold below Target Price: 6
+Current Product Price Performance: -35897
+===================================================
+==================== Product Performance History ===============================
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+===================================================
+Product Name: Xerox Copier10
+Current Target Price: 1578
+Ceiling Price: 2628
+Floor Price: 529
+No. of Orders Sold above Target Price: 5
+No. of Orders Sold below Target Price: 5
+Current Product Price Performance: -58645
+===================================================
+==================== Product Performance History ===============================
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+===================================================
+Product Name: Xerox JumboPrinter1
+Current Target Price: 1318
+Ceiling Price: 2037
+Floor Price: 599
+No. of Orders Sold above Target Price: 4
+No. of Orders Sold below Target Price: 6
+Current Product Price Performance: -53388
+===================================================
+==================== Product Performance History ===============================
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+===================================================
+Product Name: Xerox JumboPrinter2
+Current Target Price: 1603
+Ceiling Price: 2329
+Floor Price: 878
+No. of Orders Sold above Target Price: 7
+No. of Orders Sold below Target Price: 3
+Current Product Price Performance: 60187
+===================================================
+==================== Product Performance History ===============================
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+===================================================
+Product Name: Xerox JumboPrinter3
+Current Target Price: 1570
+Ceiling Price: 2393
+Floor Price: 748
+No. of Orders Sold above Target Price: 4
+No. of Orders Sold below Target Price: 6
+Current Product Price Performance: -120607
+===================================================
+==================== Product Performance History ===============================
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+===================================================
+Product Name: Xerox JumboPrinter4
+Current Target Price: 1775
+Ceiling Price: 2823
+Floor Price: 727
+No. of Orders Sold above Target Price: 5
+No. of Orders Sold below Target Price: 5
+Current Product Price Performance: -28566
+===================================================
+==================== Product Performance History ===============================
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+===================================================
+Product Name: Xerox JumboPrinter5
+Current Target Price: 1683
+Ceiling Price: 2677
+Floor Price: 689
+No. of Orders Sold above Target Price: 6
+No. of Orders Sold below Target Price: 4
+Current Product Price Performance: 79146
+===================================================
+==================== Product Performance History ===============================
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+===================================================
+Product Name: Xerox JumboPrinter6
+Current Target Price: 2187
+Ceiling Price: 3581
+Floor Price: 794
+No. of Orders Sold above Target Price: 8
+No. of Orders Sold below Target Price: 2
+Current Product Price Performance: 270858
+===================================================
+==================== Product Performance History ===============================
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+===================================================
+Product Name: Xerox JumboPrinter7
+Current Target Price: 1984
+Ceiling Price: 3073
+Floor Price: 896
+No. of Orders Sold above Target Price: 5
+No. of Orders Sold below Target Price: 5
+Current Product Price Performance: 66004
+===================================================
+==================== Product Performance History ===============================
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+===================================================
+Product Name: Xerox JumboPrinter8
+Current Target Price: 1796
+Ceiling Price: 2988
+Floor Price: 604
+No. of Orders Sold above Target Price: 5
+No. of Orders Sold below Target Price: 5
+Current Product Price Performance: -42617
+===================================================
+==================== Product Performance History ===============================
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+===================================================
+Product Name: Xerox JumboPrinter9
+Current Target Price: 1499
+Ceiling Price: 2434
+Floor Price: 565
+No. of Orders Sold above Target Price: 4
+No. of Orders Sold below Target Price: 6
+Current Product Price Performance: 9142
+===================================================
+==================== Product Performance History ===============================
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+===================================================
+Product Name: Xerox JumboPrinter10
+Current Target Price: 1354
+Ceiling Price: 2100
+Floor Price: 609
+No. of Orders Sold above Target Price: 5
+No. of Orders Sold below Target Price: 5
+Current Product Price Performance: 6325
+===================================================
+==================== Product Performance History ===============================
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+===================================================
+Product Name: Xerox UVPrinter1
+Current Target Price: 1610
+Ceiling Price: 2423
+Floor Price: 797
+No. of Orders Sold above Target Price: 3
+No. of Orders Sold below Target Price: 7
+Current Product Price Performance: -71851
+===================================================
+==================== Product Performance History ===============================
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+===================================================
+Product Name: Xerox UVPrinter2
+Current Target Price: 2174
+Ceiling Price: 3843
+Floor Price: 506
+No. of Orders Sold above Target Price: 4
+No. of Orders Sold below Target Price: 6
+Current Product Price Performance: -89002
+===================================================
+==================== Product Performance History ===============================
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+===================================================
+Product Name: Xerox UVPrinter3
+Current Target Price: 1657
+Ceiling Price: 2349
+Floor Price: 966
+No. of Orders Sold above Target Price: 8
+No. of Orders Sold below Target Price: 2
+Current Product Price Performance: 120029
+===================================================
+==================== Product Performance History ===============================
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+===================================================
+Product Name: Xerox UVPrinter4
+Current Target Price: 2147
+Ceiling Price: 3680
+Floor Price: 615
+No. of Orders Sold above Target Price: 8
+No. of Orders Sold below Target Price: 2
+Current Product Price Performance: 402502
+===================================================
+==================== Product Performance History ===============================
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+===================================================
+Product Name: Xerox UVPrinter5
+Current Target Price: 2206
+Ceiling Price: 3809
+Floor Price: 604
+No. of Orders Sold above Target Price: 4
+No. of Orders Sold below Target Price: 6
+Current Product Price Performance: -63870
+===================================================
+==================== Product Performance History ===============================
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+===================================================
+Product Name: Xerox UVPrinter6
+Current Target Price: 1725
+Ceiling Price: 2895
+Floor Price: 556
+No. of Orders Sold above Target Price: 5
+No. of Orders Sold below Target Price: 5
+Current Product Price Performance: -72981
+===================================================
+==================== Product Performance History ===============================
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+===================================================
+Product Name: Xerox UVPrinter7
+Current Target Price: 2022
+Ceiling Price: 3123
+Floor Price: 922
+No. of Orders Sold above Target Price: 5
+No. of Orders Sold below Target Price: 5
+Current Product Price Performance: 104976
+===================================================
+==================== Product Performance History ===============================
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+===================================================
+Product Name: Xerox UVPrinter8
+Current Target Price: 1534
+Ceiling Price: 2376
+Floor Price: 692
+No. of Orders Sold above Target Price: 7
+No. of Orders Sold below Target Price: 3
+Current Product Price Performance: 65102
+===================================================
+==================== Product Performance History ===============================
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+===================================================
+Product Name: Xerox UVPrinter9
+Current Target Price: 2266
+Ceiling Price: 3691
+Floor Price: 842
+No. of Orders Sold above Target Price: 2
+No. of Orders Sold below Target Price: 7
+Current Product Price Performance: -114461
+===================================================
+==================== Product Performance History ===============================
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+===================================================
+Product Name: Xerox UVPrinter10
+Current Target Price: 1720
+Ceiling Price: 2631
+Floor Price: 809
+No. of Orders Sold above Target Price: 5
+No. of Orders Sold below Target Price: 5
+Current Product Price Performance: -30397
+===================================================
+==================== Product Performance History ===============================
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
