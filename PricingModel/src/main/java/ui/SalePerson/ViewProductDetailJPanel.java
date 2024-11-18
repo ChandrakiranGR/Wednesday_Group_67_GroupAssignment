@@ -1,8 +1,3 @@
-/*
- * CreateProductJPanel.java
- *
- * Created on September 18, 2008, 2:54 PM
- */
 
 package ui.SalePerson;
 
@@ -12,7 +7,7 @@ import model.ProductManagement.Product;
 
 /**
  *
- * @author Prarthana
+ * @author Shivani
  */
 public class ViewProductDetailJPanel extends javax.swing.JPanel {
     
@@ -54,20 +49,24 @@ public class ViewProductDetailJPanel extends javax.swing.JPanel {
         jLabel6 = new javax.swing.JLabel();
         txtAvail = new javax.swing.JTextField();
 
+        setBackground(new java.awt.Color(219, 247, 255));
         setPreferredSize(new java.awt.Dimension(650, 600));
 
-        jLabel1.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
-        jLabel1.setText("Product Details");
+        jLabel1.setFont(new java.awt.Font("Noto Sans Batak", 1, 18)); // NOI18N
+        jLabel1.setText("Product Details...");
 
+        jLabel2.setFont(new java.awt.Font("Noto Sans Batak", 0, 12)); // NOI18N
         jLabel2.setText("Product Name:");
 
         txtProdName.setEditable(false);
 
+        jLabel3.setFont(new java.awt.Font("Noto Sans Batak", 0, 12)); // NOI18N
         jLabel3.setText("Price:");
 
         txtPrice.setEditable(false);
 
-        backButton1.setText("<< Back");
+        backButton1.setFont(new java.awt.Font("Noto Sans Batak", 0, 12)); // NOI18N
+        backButton1.setText(" Back");
         backButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backButton1ActionPerformed(evt);
@@ -76,8 +75,10 @@ public class ViewProductDetailJPanel extends javax.swing.JPanel {
 
         txtId.setEditable(false);
 
+        jLabel5.setFont(new java.awt.Font("Noto Sans Batak", 0, 12)); // NOI18N
         jLabel5.setText("Product ID:");
 
+        jLabel6.setFont(new java.awt.Font("Noto Sans Batak", 0, 12)); // NOI18N
         jLabel6.setText("Availability:");
 
         txtAvail.setEditable(false);
@@ -89,23 +90,25 @@ public class ViewProductDetailJPanel extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(186, 186, 186)
+                        .addGap(20, 20, 20)
+                        .addComponent(backButton1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(30, 30, 30)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.TRAILING)))
+                            .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtProdName, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtId, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtAvail, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(backButton1)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtProdName, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtId, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtAvail, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(161, Short.MAX_VALUE))
+                        .addGap(85, 85, 85)
+                        .addComponent(jLabel1)))
+                .addContainerGap(367, Short.MAX_VALUE))
         );
 
         layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {txtAvail, txtId, txtPrice, txtProdName});
@@ -113,11 +116,11 @@ public class ViewProductDetailJPanel extends javax.swing.JPanel {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(backButton1)
-                    .addComponent(jLabel1))
-                .addGap(85, 85, 85)
+                .addGap(29, 29, 29)
+                .addComponent(backButton1)
+                .addGap(63, 63, 63)
+                .addComponent(jLabel1)
+                .addGap(40, 40, 40)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtProdName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))

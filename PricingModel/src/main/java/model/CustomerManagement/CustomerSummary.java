@@ -5,14 +5,14 @@
  */
 package model.CustomerManagement;
 
-import model.OrderManagement.Order;
+import model.OrderManagement.CurrentOrder;
 
 /**
  *
  * @author kal bugrara
  */
 public class CustomerSummary {
-    Order subjectorder;
+    CurrentOrder subjectorder;
     int ordertotal;
     public CustomerSummary(CustomerProfile cp){
         

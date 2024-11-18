@@ -16,7 +16,7 @@ import model.SalesManagement.SalesPersonProfile;
  * @author kal bugrara
  */
 public class MasterOrderList {
-    ArrayList<Order> orders;
+    ArrayList<CurrentOrder> orders;
     MasterOrderReport masterorderreport;
     
     public MasterOrderList(){
@@ -24,18 +24,18 @@ public class MasterOrderList {
        
     }
     
-    public Order newOrder(CustomerProfile cp){
-        Order o= new Order(cp);
+    public CurrentOrder newOrder(CustomerProfile cp){
+        CurrentOrder o= new CurrentOrder(cp);
         orders.add(o);
         return o;
     }
-    public Order newOrder(CustomerProfile cp, SalesPersonProfile spp){
-        Order o= new Order(cp, spp);
+    public CurrentOrder newOrder(CustomerProfile cp, SalesPersonProfile spp){
+        CurrentOrder o= new CurrentOrder(cp, spp);
         orders.add(o);
         return o;
     }
     
-    public Order newOrder(CustomerProfile cp, SalesPersonProfile spp, Order order){
+    public CurrentOrder newOrder(CustomerProfile cp, SalesPersonProfile spp, CurrentOrder order){
 //        Order o= order;
         orders.add(order);
         return order;
@@ -51,7 +51,7 @@ public class MasterOrderList {
 public int getSalesVolume(){
 
 int sum = 0;
-for(Order order: orders){
+for(CurrentOrder order: orders){
     sum = sum + order.getOrderTotal();
 }
 return sum;

@@ -8,7 +8,7 @@ package model.CustomerManagement;
 import java.util.ArrayList;
 
 import model.MarketModel.Market;
-import model.OrderManagement.Order;
+import model.OrderManagement.CurrentOrder;
 import model.Personnel.Person;
 
 /**
@@ -16,7 +16,7 @@ import model.Personnel.Person;
  * @author kal bugrara
  */
 public class CustomerProfile {
-    ArrayList<Order> orders;
+    ArrayList<CurrentOrder> orders;
     ArrayList<Market> markets;
     
     Person person;
@@ -42,7 +42,7 @@ public class CustomerProfile {
         //calculate if order is positive (actual order total is greater than sum of item targets
         //if yes then add 1 to total 
         int sum = 0;
-        for(Order o: orders){
+        for(CurrentOrder o: orders){
             if(o.isOrderAboveTotalTarget()==true) sum = sum + 1;
         }
         
@@ -59,7 +59,7 @@ public class CustomerProfile {
         }
         return false;
     }
-    public void addCustomerOrder(Order o){
+    public void addCustomerOrder(CurrentOrder o){
         orders.add(o);
     }
     

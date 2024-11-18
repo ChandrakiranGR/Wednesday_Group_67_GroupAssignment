@@ -15,10 +15,10 @@ public class MasterOrderReport {
         ordersummarylist = new ArrayList();
         
     }
-    public void generateOrderReport(ArrayList<Order> orders){
-        ArrayList<Order> orderlist = orders;
+    public void generateOrderReport(ArrayList<CurrentOrder> orders){
+        ArrayList<CurrentOrder> orderlist = orders;
         OrderSummary ordersummary ;
-        for(Order order: orderlist){
+        for(CurrentOrder order: orderlist){
             ordersummary = new OrderSummary(order);
             ordersummarylist.add(ordersummary);
         }         

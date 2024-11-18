@@ -14,26 +14,26 @@ import model.Supplier.Supplier;
 
 /**
  *
- * @author prart
+ * @author Shivani
  */
-public class CustomerSelectJPanel extends javax.swing.JPanel {
+public class salesPersonProfile extends javax.swing.JPanel {
 
     /**
      * Creates new form CustomerSelectJPanel
      */
     JPanel userProcessContainer; 
     Business business;
-    SalesPersonProfile sp;
+    SalesPersonProfile salesPersonProfile;
     /**
      * Creates new form NewJFrame
      */
     
 
-    public CustomerSelectJPanel(JPanel userProcessContainer, Business business, SalesPersonProfile sp) {
+    public salesPersonProfile(JPanel userProcessContainer, Business business, SalesPersonProfile sp) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.business = business;
-        this.sp = sp;
+        this.salesPersonProfile = sp;
         populateCombo();
     }
      
@@ -51,6 +51,9 @@ public class CustomerSelectJPanel extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         btnBack = new javax.swing.JButton();
 
+        setBackground(new java.awt.Color(219, 247, 255));
+
+        btnBrowseCatalog.setFont(new java.awt.Font("Noto Sans Batak", 0, 12)); // NOI18N
         btnBrowseCatalog.setText("Browse Products");
         btnBrowseCatalog.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -64,11 +67,12 @@ public class CustomerSelectJPanel extends javax.swing.JPanel {
             }
         });
 
+        jLabel1.setFont(new java.awt.Font("Noto Sans Batak", 0, 12)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel1.setText("Customer :");
 
-        btnBack.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        btnBack.setText("<< Back");
+        btnBack.setFont(new java.awt.Font("Noto Sans Batak", 0, 12)); // NOI18N
+        btnBack.setText("Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
@@ -79,33 +83,31 @@ public class CustomerSelectJPanel extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(158, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(30, 30, 30)
-                .addComponent(cmbCustomer, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(88, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(29, 29, 29)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel1)
+                    .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(54, 54, 54)
+                .addComponent(cmbCustomer, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(167, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnBrowseCatalog)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(176, 176, 176))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(61, 61, 61)
                 .addComponent(btnBack)
-                .addGap(100, 100, 100)
+                .addGap(45, 45, 45)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(cmbCustomer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addGap(49, 49, 49)
                 .addComponent(btnBrowseCatalog)
-                .addContainerGap(111, Short.MAX_VALUE))
+                .addContainerGap(78, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -116,7 +118,7 @@ public class CustomerSelectJPanel extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(this, "Please select the Customer ");
             return;
         }
-        BrowseProductsJPanel bpp = new BrowseProductsJPanel(userProcessContainer,business, sp, cp);
+        BrowseProductsJPanel bpp = new BrowseProductsJPanel(userProcessContainer,business, salesPersonProfile, cp);
         userProcessContainer.add("BrowseProductsJPanel", bpp);
         CardLayout layout = (CardLayout)userProcessContainer.getLayout();
         layout.next(userProcessContainer);

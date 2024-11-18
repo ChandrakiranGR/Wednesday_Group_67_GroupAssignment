@@ -7,7 +7,7 @@ package model.MarketingManagement;
 
 import java.util.ArrayList;
 
-import model.OrderManagement.Order;
+import model.OrderManagement.CurrentOrder;
 import model.Personnel.Person;
 import model.Personnel.Profile;
 
@@ -16,7 +16,7 @@ import model.Personnel.Profile;
  * @author kal bugrara
  */
 public class MarketingPersonProfile extends Profile {
-    ArrayList<Order> salesorders;
+    ArrayList<CurrentOrder> salesorders;
 
 
     public MarketingPersonProfile(Person p) {
@@ -25,7 +25,7 @@ public class MarketingPersonProfile extends Profile {
         salesorders = new ArrayList();
 
     }
-    public void addSalesOrder(Order o){
+    public void addSalesOrder(CurrentOrder o){
         salesorders.add(o);
     }
     @Override
