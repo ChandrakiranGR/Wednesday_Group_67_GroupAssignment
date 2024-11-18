@@ -18,7 +18,7 @@ import model.Supplier.Supplier;
 
 /**
  *
- * @author gomathyselvamuthiah
+ * @author vish
  */
 public class ManageProductsJPanel extends javax.swing.JPanel {
 
@@ -26,9 +26,9 @@ public class ManageProductsJPanel extends javax.swing.JPanel {
     private Supplier supplier;
     Business business;
 
-    public ManageProductsJPanel (JPanel upc, Supplier s, Business b) {
+    public ManageProductsJPanel (JPanel controller, Supplier s, Business b) {
         initComponents();
-        userProcessContainer = upc;
+        userProcessContainer = controller;
         this.supplier = s;
         business = b;
         lblSupplier.setText("Supplier : " + s.getName());
@@ -67,13 +67,15 @@ public class ManageProductsJPanel extends javax.swing.JPanel {
         btnSimulation = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
 
+        setBackground(new java.awt.Color(219, 247, 255));
+
         lblTitle.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         lblTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblTitle.setText("Manage Product Catalog");
 
         lblSupplier.setText("Supplier:");
 
-        tblProductCatalog.setBackground(new java.awt.Color(204, 204, 204));
+        tblProductCatalog.setBackground(new java.awt.Color(219, 247, 255));
         tblProductCatalog.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         tblProductCatalog.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -93,7 +95,6 @@ public class ManageProductsJPanel extends javax.swing.JPanel {
         });
         jScrollPane2.setViewportView(tblProductCatalog);
 
-        btnView.setBackground(new java.awt.Color(204, 255, 204));
         btnView.setText("View Details...");
         btnView.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -101,7 +102,6 @@ public class ManageProductsJPanel extends javax.swing.JPanel {
             }
         });
 
-        btnCreate.setBackground(new java.awt.Color(204, 255, 204));
         btnCreate.setText("New Product...");
         btnCreate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -109,8 +109,7 @@ public class ManageProductsJPanel extends javax.swing.JPanel {
             }
         });
 
-        btnBack1.setBackground(new java.awt.Color(204, 255, 204));
-        btnBack1.setText("<< Back");
+        btnBack1.setText("Back");
         btnBack1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBack1ActionPerformed(evt);
@@ -176,8 +175,8 @@ public class ManageProductsJPanel extends javax.swing.JPanel {
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 582, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtCurrentTarget, javax.swing.GroupLayout.DEFAULT_SIZE, 128, Short.MAX_VALUE)
-                            .addComponent(txtTotalOrders, javax.swing.GroupLayout.DEFAULT_SIZE, 128, Short.MAX_VALUE)
+                            .addComponent(txtCurrentTarget)
+                            .addComponent(txtTotalOrders)
                             .addComponent(lblTotalOrders, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(lblCurrentTarget, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(81, 81, 81)
@@ -193,20 +192,18 @@ public class ManageProductsJPanel extends javax.swing.JPanel {
                                     .addComponent(lblAboveTarget, javax.swing.GroupLayout.DEFAULT_SIZE, 133, Short.MAX_VALUE)
                                     .addComponent(txtAboveTarget)))
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(125, 125, 125)
-                                .addComponent(btnSimulation))
-                            .addGroup(layout.createSequentialGroup()
                                 .addGap(108, 108, 108)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(txtSim, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addComponent(lblMeanofAP, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(txtMeanofAP, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
+                                        .addComponent(txtMeanofAP, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                    .addComponent(jButton1))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(btnSimulation)
+                .addGap(30, 30, 30))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -301,17 +298,8 @@ public class ManageProductsJPanel extends javax.swing.JPanel {
         Product p = (Product) tblProductCatalog.getValueAt(selectedRowIndex, 0);
         p.setProductRep();
         p.setTargetPrice(Integer.parseInt(txtSim.getText()));
-        //System.out.println("SELect"+p.getProductRep().keySet());
         refreshTable();
         setFields(p);
-//        if(p.getTargetPrice()<p.getMean()){
-//            if(p.get)
-//            p.setTargetPrice(1000);
-//            p.setProductRep();
-//        }
-//        else{
-//            return;
-//        }
     }//GEN-LAST:event_btnSimulationActionPerformed
 
     private void tblProductCatalogFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_tblProductCatalogFocusGained
@@ -324,7 +312,7 @@ public class ManageProductsJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
         int selectedRowIndex = tblProductCatalog.getSelectedRow();
         if (selectedRowIndex < 0) {
-            JOptionPane.showMessageDialog(null, "Pls select a row!!", "Warning", JOptionPane.WARNING_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Please select a row!!", "Warning", JOptionPane.WARNING_MESSAGE);
         }
         
         Product p = (Product) tblProductCatalog.getValueAt(selectedRowIndex, 0);
@@ -369,7 +357,6 @@ public class ManageProductsJPanel extends javax.swing.JPanel {
             row[1] = p.getFloorPrice();
             row[2] = p.getCeilingPrice();
             row[3] = p.getTargetPrice();
-           // row[1] = s.getProductCatalog().getProductCount() == 0 ? "None" : s.getProductCatalog().getProductCount();
             model.addRow(row);
         }
     }

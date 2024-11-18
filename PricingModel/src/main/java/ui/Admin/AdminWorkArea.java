@@ -55,9 +55,12 @@ public class AdminWorkArea extends javax.swing.JPanel {
 
         jSplitPane1.setOrientation(javax.swing.JSplitPane.VERTICAL_SPLIT);
 
-        jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
-        jLabel1.setText("Admin WorkArea");
+        controlPanel.setBackground(new java.awt.Color(219, 247, 255));
 
+        jLabel1.setFont(new java.awt.Font("Noto Sans Batak", 1, 18)); // NOI18N
+        jLabel1.setText("Admin WorkArea...");
+
+        btnPerformanceReport.setFont(new java.awt.Font("Noto Sans Batak", 0, 12)); // NOI18N
         btnPerformanceReport.setText("Performace Report");
         btnPerformanceReport.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -65,6 +68,7 @@ public class AdminWorkArea extends javax.swing.JPanel {
             }
         });
 
+        btnManageSuppliers.setFont(new java.awt.Font("Noto Sans Batak", 0, 12)); // NOI18N
         btnManageSuppliers.setText("Manage Suppliers");
         btnManageSuppliers.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -72,6 +76,7 @@ public class AdminWorkArea extends javax.swing.JPanel {
             }
         });
 
+        btnLogOut.setFont(new java.awt.Font("Noto Sans Batak", 0, 12)); // NOI18N
         btnLogOut.setText("Log Out");
         btnLogOut.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -84,17 +89,15 @@ public class AdminWorkArea extends javax.swing.JPanel {
         controlPanelLayout.setHorizontalGroup(
             controlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(controlPanelLayout.createSequentialGroup()
-                .addContainerGap(279, Short.MAX_VALUE)
+                .addGap(21, 21, 21)
                 .addComponent(btnPerformanceReport)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnManageSuppliers)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 105, Short.MAX_VALUE)
+                .addGroup(controlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1)
+                    .addComponent(btnManageSuppliers))
+                .addGap(110, 110, 110)
                 .addComponent(btnLogOut)
-                .addGap(16, 16, 16))
-            .addGroup(controlPanelLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(70, 70, 70))
         );
         controlPanelLayout.setVerticalGroup(
             controlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -103,14 +106,15 @@ public class AdminWorkArea extends javax.swing.JPanel {
                 .addComponent(jLabel1)
                 .addGap(18, 18, 18)
                 .addGroup(controlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnPerformanceReport)
                     .addComponent(btnManageSuppliers)
+                    .addComponent(btnPerformanceReport)
                     .addComponent(btnLogOut))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jSplitPane1.setTopComponent(controlPanel);
 
+        workArea.setBackground(new java.awt.Color(219, 247, 255));
         workArea.setLayout(new java.awt.CardLayout());
         jSplitPane1.setRightComponent(workArea);
 
@@ -128,35 +132,9 @@ public class AdminWorkArea extends javax.swing.JPanel {
 
     private void btnPerformanceReportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPerformanceReportActionPerformed
         // TODO add your handling code here:
-//        SupplierDirectory sd = business.getSupplierDirectory();
-//        CustomerDirectory customerdirectory = business.getCustomerDirectory();
-//   
-//        for (int j=0; j< sd.getSuplierList().size();j++){
-//            Supplier s = sd.getSuplierList().get(j);
-//            
-//            for(int k=0; k<s.getProductcatalog().getProductList().size();k++){
-//                Product p = s.getProductcatalog().getProductList().get(k);
-//                System.out.println("=============");
-//                System.out.println("Product Name"+ p.getName());
-//                System.out.println("Latest Target Price"  + p.getTargetPrice() );
-//                System.out.println("" + p.getCeilingPrice());
-//                System.out.println("" + p.getFloorPrice());
-//                System.out.println("" + p.getNumberOfProductSalesAboveTarget());
-//                System.out.println("" + p.getNumberOfProductSalesBelowTarget());
-//                System.out.println("" + p.getOrderPricePerformance());
-//                System.out.println("=============");
-//                for(Integer oldtp:p.getProductRep().keySet()){
-//                    System.out.println(""+oldtp);                    
-//                    System.out.println(""+p.getProductRep().get(oldtp).getAboveTargetNo());
-//                    System.out.println(""+p.getProductRep().get(oldtp).getBelowTargetNo());
-//                    System.out.println(""+p.getProductRep().get(oldtp).getMargin());
-//                }
-//               }
-               
-        
-//                }
+
             try {
-            FileWriter myWriter = new FileWriter("D:\\INFO-5100-AED\\"+ "Generate_Final_Product_Performance_Report" +".txt");
+            FileWriter myWriter = new FileWriter("D:\\INFO-5100-AEDGroup67Project\\"+ "Generate_Final_Product_Performance_Report" +".txt");
             SupplierDirectory sd = business.getSupplierDirectory();
             CustomerDirectory customerdirectory = business.getCustomerDirectory();
    
@@ -165,8 +143,8 @@ public class AdminWorkArea extends javax.swing.JPanel {
 
                 for(int k=0; k<s.getProductcatalog().getProductList().size();k++){
                     Product p = s.getProductcatalog().getProductList().get(k);
-                    System.out.println("===================================================");
-                    myWriter.write("===================================================" + "\n"); 
+                    System.out.println("**************************************************");
+                    myWriter.write("**************************************************" + "\n"); 
                     System.out.println("Product Name: "+ p.getName());
                     myWriter.write("Product Name: "+ p.getName() + "\n"); 
                     System.out.println("Current Target Price: "  + p.getTargetPrice() );
@@ -175,34 +153,34 @@ public class AdminWorkArea extends javax.swing.JPanel {
                     myWriter.write("Ceiling Price: " + p.getCeilingPrice() + "\n");
                     System.out.println("Floor Price: " + p.getFloorPrice());
                     myWriter.write("Floor Price: " + p.getFloorPrice() + "\n");
-                    System.out.println("No. of Orders Sold above Target Price: " + p.getNumberOfProductSalesAboveTarget());
-                    myWriter.write("No. of Orders Sold above Target Price: " + p.getNumberOfProductSalesAboveTarget() + "\n");
-                    System.out.println("No. of Orders Sold below Target Price: " + p.getNumberOfProductSalesBelowTarget());
-                    myWriter.write("No. of Orders Sold below Target Price: " + p.getNumberOfProductSalesBelowTarget() + "\n");
+                    System.out.println("Number of Orders Sold above Target Price: " + p.getNumberOfProductSalesAboveTarget());
+                    myWriter.write("Number of Orders Sold above Target Price: " + p.getNumberOfProductSalesAboveTarget() + "\n");
+                    System.out.println("Number of Orders Sold below Target Price: " + p.getNumberOfProductSalesBelowTarget());
+                    myWriter.write("Number of Orders Sold below Target Price: " + p.getNumberOfProductSalesBelowTarget() + "\n");
                     
                     System.out.println("Current Product Price Performance: " + p.getOrderPricePerformance());
                     myWriter.write("Current Product Price Performance: " + p.getOrderPricePerformance() + "\n");
-                    System.out.println("===================================================");
-                    myWriter.write("===================================================" + "\n");
-                    System.out.println("==================== Product Performance History ===============================");
-                    myWriter.write("==================== Product Performance History ===============================" + "\n");
-                    for(Integer oldtp:p.getProductRep().keySet()){
-                        System.out.println("Previous Target Price: " + oldtp); 
-                        myWriter.write("Previous Target Price: " + oldtp + "\n");
-                        System.out.println("No. of Orders Sold Above Target Price: "+p.getProductRep().get(oldtp).getAboveTargetNo());
-                        myWriter.write("No. of Orders Sold Above Target Price: "+p.getProductRep().get(oldtp).getAboveTargetNo() + "\n");
-                        System.out.println("No. of Orders Sold Below Target Price: "+p.getProductRep().get(oldtp).getBelowTargetNo());
-                        myWriter.write("No. of Orders Sold Below Target Price: "+p.getProductRep().get(oldtp).getBelowTargetNo() + "\n");
-                        System.out.println("Previous Product Price Performance: "+p.getProductRep().get(oldtp).getMargin());
-                        myWriter.write("Previous Product Price Performance: "+p.getProductRep().get(oldtp).getMargin() + "\n");
-                        System.out.println("===================================================");
-                        myWriter.write("===================================================" + "\n");
+                    System.out.println("**************************************************");
+                    myWriter.write("**************************************************" + "\n");
+                    System.out.println("***************** Product Performance History ****************");
+                    myWriter.write("***************** Product Performance History *****************" + "\n");
+                    for(Integer oldTargetPrice:p.getProductRep().keySet()){
+                        System.out.println("Previous Target Price: " + oldTargetPrice); 
+                        myWriter.write("Previous Target Price: " + oldTargetPrice + "\n");
+                        System.out.println("No. of Orders Sold Above Target Price: "+p.getProductRep().get(oldTargetPrice).getAboveTargetNo());
+                        myWriter.write("No. of Orders Sold Above Target Price: "+p.getProductRep().get(oldTargetPrice).getAboveTargetNo() + "\n");
+                        System.out.println("No. of Orders Sold Below Target Price: "+p.getProductRep().get(oldTargetPrice).getBelowTargetNo());
+                        myWriter.write("No. of Orders Sold Below Target Price: "+p.getProductRep().get(oldTargetPrice).getBelowTargetNo() + "\n");
+                        System.out.println("Previous Product Price Performance: "+p.getProductRep().get(oldTargetPrice).getMargin());
+                        myWriter.write("Previous Product Price Performance: "+p.getProductRep().get(oldTargetPrice).getMargin() + "\n");
+                        System.out.println("**************************************************");
+                        myWriter.write("**************************************************" + "\n");
                     }
-                    myWriter.write("++++++++++++++++++++++++++++++++++++++++++++++++++++++" + "\n");
+                    myWriter.write("**************************************************" + "\n");
                   }
                 }      
                 myWriter.close();
-                JOptionPane.showMessageDialog(this, "Report has been generated.");
+                JOptionPane.showMessageDialog(this, "Report has been generated successfully.");
   
         } catch (IOException e) {
             e.printStackTrace();
@@ -225,8 +203,6 @@ public class AdminWorkArea extends javax.swing.JPanel {
         mainWorkArea.remove(this);
         Component[] componentArray = mainWorkArea.getComponents();
         Component component = componentArray[componentArray.length - 1];
-        // LoginScreen loginPanel= (LoginScreen) component;
-        //   loginPanel.populateSupplierCombo();
         CardLayout layout = (CardLayout)mainWorkArea.getLayout();
         layout.next(mainWorkArea);
 

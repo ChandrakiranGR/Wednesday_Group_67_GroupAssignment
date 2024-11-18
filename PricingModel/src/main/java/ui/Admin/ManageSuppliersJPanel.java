@@ -13,14 +13,14 @@ import javax.swing.table.DefaultTableModel;
 import model.Business.Business;
 import model.Supplier.Supplier;
 import model.Supplier.SupplierDirectory;
-import ui.admin.AddSupplierJPanel;
+import ui.Admin.AddSupplierJPanel;
 
 
 
 
 /**
  *
- * @author gomathyselvamuthiah
+ * @author vish
  */
 public class ManageSuppliersJPanel extends javax.swing.JPanel {
 
@@ -28,10 +28,9 @@ public class ManageSuppliersJPanel extends javax.swing.JPanel {
      Business business;
     SupplierDirectory supplierDirectory;
     
-    /** Creates new form ManageSuppliers */
-    public ManageSuppliersJPanel(JPanel upc, Business b) {
+    public ManageSuppliersJPanel(JPanel controller, Business b) {
         initComponents();
-        userProcessContainer = upc;
+        userProcessContainer = controller;
         business = b;
         supplierDirectory = business.getSupplierDirectory();
         refreshTable();
@@ -45,7 +44,6 @@ public class ManageSuppliersJPanel extends javax.swing.JPanel {
         for(Supplier s : supplierDirectory.getSuplierList()) {
             Object row[] = new Object[1];
             row[0] = s;
-           // row[1] = s.getProductCatalog().getProductCount() == 0 ? "None" : s.getProductCatalog().getProductCount();
             model.addRow(row);
         }
     }
@@ -65,6 +63,8 @@ public class ManageSuppliersJPanel extends javax.swing.JPanel {
         btnViewProducts = new javax.swing.JButton();
         lblSupplierList = new javax.swing.JLabel();
         btnBack = new javax.swing.JButton();
+
+        setBackground(new java.awt.Color(219, 247, 255));
 
         tblSuppliers.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -101,11 +101,10 @@ public class ManageSuppliersJPanel extends javax.swing.JPanel {
             }
         });
 
-        lblSupplierList.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
-        lblSupplierList.setText("Manage Suppliers");
+        lblSupplierList.setFont(new java.awt.Font("Noto Sans Batak", 1, 18)); // NOI18N
+        lblSupplierList.setText("Manage Suppliers...");
 
-        btnBack.setBackground(new java.awt.Color(204, 255, 204));
-        btnBack.setText("<< Back");
+        btnBack.setText("Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
@@ -150,7 +149,7 @@ public class ManageSuppliersJPanel extends javax.swing.JPanel {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(18, 18, 18)
                         .addComponent(btnDelete)))
-                .addContainerGap(144, Short.MAX_VALUE))
+                .addContainerGap(135, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -162,9 +161,7 @@ public class ManageSuppliersJPanel extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null, "Please select a row from the table first", "Warning", JOptionPane.WARNING_MESSAGE);
             return;
         }
-        Supplier s = (Supplier)tblSuppliers.getValueAt(row, 0);
-//        supplierDirectory.deleteSupplier(s);
-       
+        Supplier s = (Supplier)tblSuppliers.getValueAt(row, 0);       
         refreshTable();
     }//GEN-LAST:event_btnDeleteActionPerformed
 

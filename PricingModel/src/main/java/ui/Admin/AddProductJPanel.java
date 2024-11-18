@@ -83,7 +83,7 @@ JPanel userProcessContainer;
 
         btnBack.setBackground(java.awt.Color.lightGray);
         btnBack.setForeground(java.awt.Color.darkGray);
-        btnBack.setText("< Back");
+        btnBack.setText("Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
