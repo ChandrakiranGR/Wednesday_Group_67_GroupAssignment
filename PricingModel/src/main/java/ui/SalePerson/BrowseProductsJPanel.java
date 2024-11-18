@@ -50,7 +50,6 @@ public class BrowseProductsJPanel extends javax.swing.JPanel {
         this.customerProfile =customerProfile;
         this.salesPersonProfile = salesPersonProfile;
         populateCombo();
-//        populateCustCombo();
         populateProductTable();
         populateCartTable();
     }
@@ -362,7 +361,6 @@ public class BrowseProductsJPanel extends javax.swing.JPanel {
         OrderItem item = (OrderItem) tblCart.getValueAt(selectedRowIndex, 0);
         int quantity = 0;
         
-//        item.getSelectedProduct().setAvail(item.getSelectedProduct().getAvail()+item.getQuantity());
         currentOrder.deleteItem(item);
        populateCartTable();
        populateProductTable();

@@ -18,15 +18,11 @@ import model.Supplier.Supplier;
  */
 public class salesPersonProfile extends javax.swing.JPanel {
 
-    /**
-     * Creates new form CustomerSelectJPanel
-     */
+    
     JPanel userProcessContainer; 
     Business business;
     SalesPersonProfile salesPersonProfile;
-    /**
-     * Creates new form NewJFrame
-     */
+    
     
 
     public salesPersonProfile(JPanel userProcessContainer, Business business, SalesPersonProfile salesPersonProfile) {

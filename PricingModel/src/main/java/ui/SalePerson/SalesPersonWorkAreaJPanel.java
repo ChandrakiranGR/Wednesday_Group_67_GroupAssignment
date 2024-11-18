@@ -118,7 +118,6 @@ public class SalesPersonWorkAreaJPanel extends javax.swing.JPanel {
 
     private void btnBrowseCatalogActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBrowseCatalogActionPerformed
         // TODO add your handling code here:
-//        BrowseProductsJPanel bpp = new BrowseProductsJPanel(userProcessContainer,business, sp);
         salesPersonProfile cswa = new salesPersonProfile(userProcessContainer, business, salesPersonProfile);
         userProcessContainer.add("CustomerSelectJPanel", cswa);
         CardLayout layout = (CardLayout)userProcessContainer.getLayout();
