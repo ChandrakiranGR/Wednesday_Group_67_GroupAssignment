@@ -46,7 +46,6 @@ public class Business {
         name = n;
         masterorderlist = new MasterOrderList();
         suppliers = new SupplierDirectory();
-//        solutionoffercatalog = new SolutionOfferCatalog();
         persondirectory = new PersonDirectory();
         customerdirectory = new CustomerDirectory(this);
         salespersondirectory = new SalesPersonDirectory(this);
@@ -93,8 +92,8 @@ public class Business {
     }
 
     public int getHowManySupplierProductsAlwaysAboveTarget(String n) {
-        ProductsReport productsreport = getSupplierPerformanceReport(n); // see above
-        int i = productsreport.getProductsAlwaysAboveTarget().size(); //return size of the arraylist
+        ProductsReport productsreport = getSupplierPerformanceReport(n); 
+        int i = productsreport.getProductsAlwaysAboveTarget().size(); 
         return i;
     }
 

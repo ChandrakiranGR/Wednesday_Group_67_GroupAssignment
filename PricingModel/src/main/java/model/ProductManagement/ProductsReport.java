@@ -29,9 +29,9 @@ public class ProductsReport {
 
         for (ProductSummary ps : productsummarylist) {
             if (currenttopproduct == null) {
-                currenttopproduct = ps; // initial step 
+                currenttopproduct = ps; 
             } else if (ps.getNumberAboveTarget() > currenttopproduct.getNumberAboveTarget()) {
-                currenttopproduct = ps; //we have a new higher total
+                currenttopproduct = ps;
             }
 
         }
@@ -39,7 +39,7 @@ public class ProductsReport {
     }
 
     public ArrayList<ProductSummary> getProductsAlwaysAboveTarget() {
-        ArrayList<ProductSummary> productsalwaysabovetarget = new ArrayList(); //temp array list
+        ArrayList<ProductSummary> productsalwaysabovetarget = new ArrayList(); 
 
         for (ProductSummary ps : productsummarylist) {
             if (ps.isProductAlwaysAboveTarget() == true) {

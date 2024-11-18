@@ -53,7 +53,6 @@ public class Supplier {
         this.name = name;
     }
        
-    //add supplier product ..
 
     public ProductCatalog getProductcatalog() {
         return productcatalog;
@@ -64,9 +63,7 @@ public class Supplier {
         this.productcatalog = productcatalog;
     }
 
-    
-    //update supplier product ...
-    @Override
+        @Override
    public String toString(){
        return name;
        

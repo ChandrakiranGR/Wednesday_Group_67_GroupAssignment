@@ -6,9 +6,9 @@ package model.ProductManagement;
 
 /**
  *
- * @author prart
+ * @author chandrakiran
  */
-public class ProductRep {
+public class ProductDetails {
     int aboveTargetNo;
     int belowTargetNo;
     int margin;

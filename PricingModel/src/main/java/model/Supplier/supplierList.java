@@ -7,16 +7,14 @@ package model.Supplier;
 
 /**
  *
- * @author gomathyselvamuthiah
+ * @author chandrakiran
  */
 public class supplierList {
 
     static void add(Supplier newSupplier) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     static void delete(Supplier s) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }

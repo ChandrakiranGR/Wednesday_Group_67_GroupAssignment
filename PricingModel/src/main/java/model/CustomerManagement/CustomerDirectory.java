@@ -41,7 +41,7 @@ public class CustomerDirectory {
                 return sp;
             }
         }
-            return null; //not found after going through the whole list
+            return null; 
          }
         public CustomersReport generatCustomerPerformanceReport(){
         CustomersReport customersreport = new CustomersReport();
