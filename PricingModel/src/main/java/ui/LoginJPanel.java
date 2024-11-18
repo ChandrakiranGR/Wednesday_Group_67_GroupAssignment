@@ -63,9 +63,9 @@ public class LoginJPanel extends javax.swing.JPanel {
         lblApplicationLogin = new javax.swing.JLabel();
         txtPasswordField = new javax.swing.JPasswordField();
 
-        setBackground(new java.awt.Color(204, 204, 255));
+        setBackground(new java.awt.Color(219, 247, 255));
 
-        lblUserName.setFont(new java.awt.Font("Times New Roman", 0, 15)); // NOI18N
+        lblUserName.setFont(new java.awt.Font("Noto Sans Batak", 0, 14)); // NOI18N
         lblUserName.setText("User Name:");
 
         txtUserNameField.addActionListener(new java.awt.event.ActionListener() {
@@ -74,10 +74,10 @@ public class LoginJPanel extends javax.swing.JPanel {
             }
         });
 
-        lblPassword.setFont(new java.awt.Font("Times New Roman", 0, 15)); // NOI18N
+        lblPassword.setFont(new java.awt.Font("Noto Sans Batak", 0, 14)); // NOI18N
         lblPassword.setText("Password:");
 
-        btnLogin.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        btnLogin.setFont(new java.awt.Font("Noto Sans Batak", 0, 14)); // NOI18N
         btnLogin.setText("Login");
         btnLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -85,7 +85,7 @@ public class LoginJPanel extends javax.swing.JPanel {
             }
         });
 
-        lblApplicationLogin.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        lblApplicationLogin.setFont(new java.awt.Font("Noto Sans Batak", 1, 18)); // NOI18N
         lblApplicationLogin.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblApplicationLogin.setText("PRICING APPLICATION LOGIN");
 
@@ -120,7 +120,7 @@ public class LoginJPanel extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGap(24, 24, 24)
                 .addComponent(lblApplicationLogin)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 90, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 88, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblUserName)
                     .addComponent(txtUserNameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -130,7 +130,7 @@ public class LoginJPanel extends javax.swing.JPanel {
                     .addComponent(txtPasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(26, 26, 26)
                 .addComponent(btnLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(169, Short.MAX_VALUE))
+                .addContainerGap(166, Short.MAX_VALUE))
         );
 
         layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {btnLogin, lblPassword, lblUserName, txtPasswordField, txtUserNameField});
