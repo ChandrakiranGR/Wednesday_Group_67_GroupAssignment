@@ -62,15 +62,17 @@ public class CustomerProfile {
     public void addCustomerOrder(Order o){
         orders.add(o);
     }
-    @Override
-    public String toString(){
-        return person.getPersonId();
-    }
-        public String getCustomerId(){
+    
+    public String getCustomerId(){
         return person.getPersonId();
     }
             public Person getPerson(){
         return person;
+    }
+
+    @Override
+    public String toString() {
+        return person.getPersonId();
     }
         
         

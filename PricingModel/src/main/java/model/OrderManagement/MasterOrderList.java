@@ -28,15 +28,17 @@ public class MasterOrderList {
         Order o= new Order(cp);
         orders.add(o);
         return o;
-            
- 
     }
     public Order newOrder(CustomerProfile cp, SalesPersonProfile spp){
         Order o= new Order(cp, spp);
         orders.add(o);
         return o;
-            
- 
+    }
+    
+    public Order newOrder(CustomerProfile cp, SalesPersonProfile spp, Order order){
+//        Order o= order;
+        orders.add(order);
+        return order;
     }
     
     public MasterOrderReport generateMasterOrderReport(){

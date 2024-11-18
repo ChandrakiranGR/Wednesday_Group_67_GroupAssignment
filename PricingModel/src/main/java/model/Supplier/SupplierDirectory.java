@@ -33,5 +33,31 @@ public class SupplierDirectory {
     public ArrayList<Supplier> getSuplierList(){
         return suppliers;
     }
+
+
+    public void removeSupplier(Supplier s) {
+        
+    }
     
+
+
+     public Supplier addSupplier() {
+        Supplier newSupplier = new Supplier();
+        supplierList.add(newSupplier);
+        return newSupplier;
+    }
+
+    public void deleteSupplier(Supplier s) {
+        supplierList.delete(s);
+    } 
+
+    public ArrayList<Supplier> getSuppliers() {
+        return suppliers;
+    }
+
+    public void setSuppliers(ArrayList<Supplier> suppliers) {
+        this.suppliers = suppliers;
+    }
+
 }
+

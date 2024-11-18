@@ -1,3 +1,8 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package model.SalesManagement;
 
 import java.util.ArrayList;
@@ -7,7 +12,8 @@ import model.Personnel.Person;
 import model.Personnel.Profile;
 
 /**
- * SalesPersonProfile class - Extended for sales feedback and analysis
+ *
+ * @author kal bugrara
  */
 public class SalesPersonProfile extends Profile {
     ArrayList<Order> salesorders;

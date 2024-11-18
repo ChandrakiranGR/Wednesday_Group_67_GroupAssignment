@@ -49,5 +49,19 @@ public class UserAccountDirectory {
             }
         }
             return null; //not found after going through the whole list
-         }   
+         } 
+     
+     
+    // Added new method for listing the user accounts
+    public ArrayList<UserAccount> getUserAccountList()
+     {
+         return useraccountlist;
+     }
+
+//    public void deletePerson(UserAccount selectedperson) {
+//        
+//        useraccountlist.remove(selectedperson);
+//    
+//    }
+     
 }

@@ -1,159 +1,168 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package model.ProductManagement;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+
 import model.OrderManagement.OrderItem;
 
 /**
- * Updated Product Class
- * Author: kal bugrara
+ *
+ * @author kal bugrara
  */
 public class Product {
     private String name;
     private int floorPrice;
     private int ceilingPrice;
     private int targetPrice;
-    private ArrayList<OrderItem> orderItems;
+    ArrayList<OrderItem> orderitems;
+    HashMap<Integer,ProductRep> productRep;
 
-    // Constructors
-    public Product(int fp, int cp, int tp) {
-        this.floorPrice = fp;
-        this.ceilingPrice = cp;
-        this.targetPrice = tp;
-        this.orderItems = new ArrayList<>();
+    public Product( int fp, int cp, int tp) {
+
+        floorPrice = fp;
+        ceilingPrice = cp;
+        targetPrice = tp;
+        orderitems = new ArrayList();
+        productRep = new HashMap<>();
     }
-
     public Product(String n, int fp, int cp, int tp) {
-        this.name = n;
-        this.floorPrice = fp;
-        this.ceilingPrice = cp;
-        this.targetPrice = tp;
-        this.orderItems = new ArrayList<>();
+        name = n;
+        floorPrice = fp;
+        ceilingPrice = cp;
+        targetPrice = tp;
+        orderitems = new ArrayList();
+        productRep = new HashMap<>();
+        
+    }
+        public Product updateProduct(int fp, int cp, int tp) {
+        floorPrice = fp;
+        ceilingPrice = cp;
+        targetPrice = tp;
+        return this; //returns itself
     }
 
-    // Updates the product prices
-    public Product updateProduct(int fp, int cp, int tp) {
-        this.floorPrice = fp;
-        this.ceilingPrice = cp;
-        this.targetPrice = tp;
-        return this; // Returns itself
+    public void setProductRep() {
+        ProductRep productrep = new ProductRep();
+        productrep.setAboveTargetNo(getNumberOfProductSalesAboveTarget());
+        //System.out.println();
+        productrep.setBelowTargetNo(getNumberOfProductSalesBelowTarget());
+        productrep.setMargin(getOrderPricePerformance());
+        
+        productRep.put(targetPrice,productrep);
+        //System.out.println(productRep.keySet());
     }
 
-    // Getters and Setters
-    public int getTargetPrice() {
-        return targetPrice;
+    public HashMap<Integer, ProductRep> getProductRep() {
+        return productRep;
+    }
+    
+    
+    
+    public int getTargetPrice() {return targetPrice;}
+    public void addOrderItem(OrderItem oi){     
+        orderitems.add(oi);
     }
 
     public void setTargetPrice(int targetPrice) {
         this.targetPrice = targetPrice;
     }
-
-    public void setName(String n) {
-        this.name = n;
+    
+    
+    
+    
+    //Number of item sales above target 
+    public int getNumberOfProductSalesAboveTarget(){
+        int sum = 0;
+        for (OrderItem oi: orderitems){
+            if(oi.isActualAboveTarget()==true) sum = sum +1;
+        }
+        return sum;
     }
-
+    public int getNumberOfProductSalesBelowTarget(){
+        int sum = 0;
+        for (OrderItem oi: orderitems){
+            if(oi.isActualBelowTarget()==true) sum = sum +1;
+        }
+        return sum;
+    }    
+    
+        public boolean isProductAlwaysAboveTarget(){
+        
+        for (OrderItem oi: orderitems){
+            if(oi.isActualAboveTarget()==false) return false; //
+        }
+        return true;
+    }
+    //calculates the revenues gained or lost (in relation to the target)
+    //For example, if target is at $2000 and actual is $2500 then revenue gained
+    // is $500 above the expected target. If the actual is $1800 then the lose will be $200
+    // Add all these difference to get the total including wins and loses
+    
+        public int getOrderPricePerformance() {
+        int sum = 0;
+        for (OrderItem oi : orderitems) {
+            sum = sum + oi.calculatePricePerformance();     //positive and negative values       
+        }
+        return sum;
+    }
+        public int getSalesVolume() {
+        int sum = 0;
+        for (OrderItem oi : orderitems) {
+            sum = sum + oi.getOrderItemTotal();     //positive and negative values       
+        }
+        return sum;
+    }
+    public int getMean(){
+        return getSalesVolume()/getQuantity();
+    }
+    
+    public int totalActualPrice(){
+      try{
+          int count =0;
+          int sum = 0;
+            for (OrderItem oi : orderitems) {
+                sum = sum + oi.getActualPrice();     //positive and negative values       
+            }
+            return sum==0?0:sum/orderitems.size();
+      }
+      catch(Exception e){
+       e.printStackTrace();
+      }
+      return 0;
+    }
+    public void setName(String n){
+        name = n;
+    }
+    public int getFloorPrice(){
+        return floorPrice;
+    }
+    public int getCeilingPrice(){
+        return ceilingPrice;
+    }
+  
     public String getName() {
         return name;
     }
 
-    public int getFloorPrice() {
-        return floorPrice;
-    }
-
-    public int getCeilingPrice() {
-        return ceilingPrice;
-    }
-
-    // Add OrderItem to Product
-    public void addOrderItem(OrderItem oi) {
-        this.orderItems.add(oi);
-    }
-
-    // Calculates the number of sales above the target price
-    public int getNumberOfProductSalesAboveTarget() {
-        int sum = 0;
-        for (OrderItem oi : orderItems) {
-            if (oi.isActualAboveTarget()) {
-                sum++;
-            }
+    public int getQuantity(){
+        int Qauntity =0;
+        for (OrderItem oi : orderitems) {
+            if(oi.getSelectedProduct().getName().equals(name)){
+                Qauntity = Qauntity + oi.getQuantity();     //positive and negative values     
+            }  
         }
-        return sum;
+        
+        return Qauntity;
     }
-
-    // Calculates the number of sales below the target price
-    public int getNumberOfProductSalesBelowTarget() {
-        int sum = 0;
-        for (OrderItem oi : orderItems) {
-            if (oi.isActualBelowTarget()) {
-                sum++;
-            }
-        }
-        return sum;
-    }
-
-    // Checks if all sales are above the target price
-    public boolean isProductAlwaysAboveTarget() {
-        for (OrderItem oi : orderItems) {
-            if (!oi.isActualAboveTarget()) {
-                return false;
-            }
-        }
-        return true;
-    }
-
-    // Calculates the total price performance
-    public int getOrderPricePerformance() {
-        int sum = 0;
-        for (OrderItem oi : orderItems) {
-            sum += oi.calculatePricePerformance(); // Positive and negative values
-        }
-        return sum;
-    }
-
-    // Calculates the total sales volume
-    public int getSalesVolume() {
-        int sum = 0;
-        for (OrderItem oi : orderItems) {
-            sum += oi.getOrderItemTotal();
-        }
-        return sum;
-    }
-
-    // Adjust the target price dynamically (helper for simulation)
-    public void adjustTargetPrice(double percentage, boolean increase) {
-        if (increase) {
-            this.targetPrice += this.targetPrice * (percentage / 100.0);
-        } else {
-            this.targetPrice -= this.targetPrice * (percentage / 100.0);
-        }
-    }
-    
-    public void decreaseTargetPrice(double percentage) {
-    // Reduce the target price by a percentage
-    this.targetPrice -= this.targetPrice * (percentage / 100.0);
-
-    // Ensure target price does not go below the floor price
-    if (this.targetPrice < this.floorPrice) {
-        this.targetPrice = this.floorPrice;
-    }
-}
-    public void increaseTargetPrice(double percentage) {
-    // Increase the target price by a percentage
-    this.targetPrice += this.targetPrice * (percentage / 100.0);
-
-    // Ensure target price does not exceed the ceiling price
-    if (this.targetPrice > this.ceilingPrice) {
-        this.targetPrice = this.ceilingPrice;
-    }
-}
-    public double calculateRevenue() {
-    return this.getSalesVolume() * this.getTargetPrice();
-}
-
-
-
-
     @Override
     public String toString() {
-        return name;
+        return  name;
     }
+    
+    
 }

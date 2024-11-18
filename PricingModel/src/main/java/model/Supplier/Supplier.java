@@ -18,12 +18,17 @@ import model.ProductManagement.ProductsReport;
 public class Supplier {
     String name;
     ProductCatalog productcatalog;
-   ProductsReport productsreport;
+    ProductsReport productsreport;
     public Supplier(String n){
         name = n;
         productcatalog = new ProductCatalog("software");
         
     }
+
+    Supplier() {
+        
+    }
+
     
     public ProductsReport prepareProductsReport(){
         
@@ -41,10 +46,24 @@ public class Supplier {
     public String getName(){
         return name;
     }
-        public ProductCatalog getProductCatalog(){
+
+    
+   
+    public void setName(String name) {
+        this.name = name;
+    }
+       
+    //add supplier product ..
+
+    public ProductCatalog getProductcatalog() {
         return productcatalog;
     }
-    //add supplier product ..
+
+    
+    public void setProductcatalog(ProductCatalog productcatalog) {
+        this.productcatalog = productcatalog;
+    }
+
     
     //update supplier product ...
     @Override

@@ -24,7 +24,6 @@ public class Order {
     MarketChannelAssignment mca;
     String status;
 
-    public Order(){}
     
     public Order(CustomerProfile cp) {
         orderitems = new ArrayList();
@@ -42,6 +41,8 @@ public class Order {
         customer.addCustomerOrder(this); //we link the order to the customer
         salesperson.addSalesOrder(this);  
     }
+    
+    
     public OrderItem newOrderItem(Product p, int actualprice, int q) {
         OrderItem oi = new OrderItem(p, actualprice, q);
         orderitems.add(oi);
@@ -84,10 +85,46 @@ public class Order {
         else {return false;}
         
     }
-public void CancelOrder(){
-    status = "Cancelled";
-}
-public void Submit(){
-    status = "Submitted";
-}
+    public void CancelOrder(){
+        status = "Cancelled";
+    }
+    
+    public void Submit(){
+        status = "Submitted";
+    }
+
+    public void deleteItem(OrderItem item) {
+        this.orderitems.remove(item);
+    }
+
+    public OrderItem findProduct(Product product) {
+        for (OrderItem oi:orderitems){
+            if(oi.getSelectedProduct().equals(product)){
+                return oi;
+            }
+        }
+        return null;   
+    }
+
+    public ArrayList<OrderItem> getOrderitems() {
+        return orderitems;
+    }
+
+    public CustomerProfile getCustomer() {
+        return customer;
+    }
+
+    public SalesPersonProfile getSalesperson() {
+        return salesperson;
+    }
+
+    public MarketChannelAssignment getMca() {
+        return mca;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+    
+    
 }

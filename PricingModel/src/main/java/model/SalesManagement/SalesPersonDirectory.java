@@ -44,4 +44,8 @@ public class SalesPersonDirectory {
             return null; //not found after going through the whole list
          }
 
+    public ArrayList<SalesPersonProfile> getSalespersonlist() {
+        return salespersonlist;
+    }
+
 }
