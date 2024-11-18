@@ -13,7 +13,7 @@ import javax.swing.JPanel;
 import model.Business.Business;
 import model.CustomerManagement.CustomerDirectory;
 import model.CustomerManagement.CustomerProfile;
-import model.OrderManagement.Order;
+import model.OrderManagement.CurrentOrder;
 import model.OrderManagement.OrderItem;
 import model.ProductManagement.Product;
 import model.Supplier.Supplier;

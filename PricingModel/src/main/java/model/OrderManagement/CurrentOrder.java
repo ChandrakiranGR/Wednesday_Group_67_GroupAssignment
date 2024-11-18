@@ -16,7 +16,7 @@ import model.SalesManagement.SalesPersonProfile;
  *
  * @author kal bugrara
  */
-public class Order {
+public class CurrentOrder {
 
     ArrayList<OrderItem> orderitems;
     CustomerProfile customer;
@@ -25,7 +25,7 @@ public class Order {
     String status;
 
     
-    public Order(CustomerProfile cp) {
+    public CurrentOrder(CustomerProfile cp) {
         orderitems = new ArrayList();
         customer = cp;
         customer.addCustomerOrder(this); //we link the order to the customer
@@ -34,7 +34,7 @@ public class Order {
     }
 
 
-    public Order(CustomerProfile cp, SalesPersonProfile ep) {
+    public CurrentOrder(CustomerProfile cp, SalesPersonProfile ep) {
         orderitems = new ArrayList();
         customer = cp;
         salesperson = ep;

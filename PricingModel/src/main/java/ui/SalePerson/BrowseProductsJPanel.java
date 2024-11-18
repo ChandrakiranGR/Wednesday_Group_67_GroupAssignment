@@ -1,8 +1,4 @@
-/*
- * BrowseProducts.java
- *
- * Created on October 10, 2008, 9:10 AM
- */
+
 package ui.SalePerson;
 
 
@@ -14,7 +10,7 @@ import javax.swing.table.DefaultTableModel;
 import model.Business.Business;
 import model.CustomerManagement.CustomerProfile;
 import model.OrderManagement.MasterOrderList;
-import model.OrderManagement.Order;
+import model.OrderManagement.CurrentOrder;
 import model.OrderManagement.OrderItem;
 import model.ProductManagement.Product;
 import model.SalesManagement.SalesPersonProfile;
@@ -25,15 +21,15 @@ import model.Supplier.SupplierDirectory;
 
 /**
  *
- * @author prarthana_krishnamurthy
+ * @author Shivani
  */
 public class BrowseProductsJPanel extends javax.swing.JPanel {
 
     JPanel userProcessContainer;
     Business business;
-    Order currentOrder;
-    CustomerProfile cp;
-    SalesPersonProfile sp;
+    CurrentOrder currentOrder;
+    CustomerProfile customerProfile;
+    SalesPersonProfile salesPersonProfile;
     
     /** Creates new form BrowseProducts */
 
@@ -50,9 +46,9 @@ public class BrowseProductsJPanel extends javax.swing.JPanel {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.business =business;
-        this.currentOrder = new Order(cp,sp);
-        this.cp =cp;
-        this.sp = sp;
+        this.currentOrder = new CurrentOrder(cp,sp);
+        this.customerProfile =cp;
+        this.salesPersonProfile = sp;
         populateCombo();
 //        populateCustCombo();
         populateProductTable();
@@ -86,25 +82,28 @@ public class BrowseProductsJPanel extends javax.swing.JPanel {
         btnCheckOut = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(240, 240, 240));
+        setBackground(new java.awt.Color(219, 247, 255));
         setPreferredSize(new java.awt.Dimension(650, 600));
 
-        btnBack.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        btnBack.setText("<< Back");
+        btnBack.setFont(new java.awt.Font("Noto Sans Batak", 0, 12)); // NOI18N
+        btnBack.setText("Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
             }
         });
 
+        lblSupplier.setFont(new java.awt.Font("Noto Sans Batak", 0, 12)); // NOI18N
         lblSupplier.setText("Supplier:");
 
+        cmbSupplier.setFont(new java.awt.Font("Noto Sans Batak", 0, 12)); // NOI18N
         cmbSupplier.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmbSupplierActionPerformed(evt);
             }
         });
 
+        btnSearchProduct.setFont(new java.awt.Font("Noto Sans Batak", 0, 12)); // NOI18N
         btnSearchProduct.setText("Search Product");
         btnSearchProduct.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -112,9 +111,10 @@ public class BrowseProductsJPanel extends javax.swing.JPanel {
             }
         });
 
+        lblProductCatalogue.setFont(new java.awt.Font("Noto Sans Batak", 0, 12)); // NOI18N
         lblProductCatalogue.setText("Product Catalog:");
 
-        tblProductCatalog.setFont(new java.awt.Font("Lucida Grande", 0, 13)); // NOI18N
+        tblProductCatalog.setFont(new java.awt.Font("Noto Sans Batak", 0, 12)); // NOI18N
         tblProductCatalog.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -139,12 +139,15 @@ public class BrowseProductsJPanel extends javax.swing.JPanel {
         jScrollPane1.setViewportView(tblProductCatalog);
         tblProductCatalog.getColumnModel().getSelectionModel().setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
 
+        lblSalesPrice.setFont(new java.awt.Font("Noto Sans Batak", 0, 12)); // NOI18N
         lblSalesPrice.setText("Actual Price:");
 
+        lblQuantity.setFont(new java.awt.Font("Noto Sans Batak", 0, 12)); // NOI18N
         lblQuantity.setText("Quantity:");
 
         spnQuantity.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
 
+        btnAddToCart.setFont(new java.awt.Font("Noto Sans Batak", 0, 12)); // NOI18N
         btnAddToCart.setText("Add to Cart");
         btnAddToCart.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -152,6 +155,7 @@ public class BrowseProductsJPanel extends javax.swing.JPanel {
             }
         });
 
+        btnProductDetails.setFont(new java.awt.Font("Noto Sans Batak", 0, 12)); // NOI18N
         btnProductDetails.setText("View Product Details");
         btnProductDetails.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -159,8 +163,10 @@ public class BrowseProductsJPanel extends javax.swing.JPanel {
             }
         });
 
+        lblItemsInCart.setFont(new java.awt.Font("Noto Sans Batak", 0, 12)); // NOI18N
         lblItemsInCart.setText("Items in cart:");
 
+        tblCart.setFont(new java.awt.Font("Noto Sans Batak", 0, 12)); // NOI18N
         tblCart.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -182,6 +188,7 @@ public class BrowseProductsJPanel extends javax.swing.JPanel {
         });
         jScrollPane2.setViewportView(tblCart);
 
+        btnViewOrderItem.setFont(new java.awt.Font("Noto Sans Batak", 0, 12)); // NOI18N
         btnViewOrderItem.setText("View Item");
         btnViewOrderItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -189,6 +196,7 @@ public class BrowseProductsJPanel extends javax.swing.JPanel {
             }
         });
 
+        btnRemoveOrderItem.setFont(new java.awt.Font("Noto Sans Batak", 0, 12)); // NOI18N
         btnRemoveOrderItem.setText("Remove");
         btnRemoveOrderItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -196,30 +204,24 @@ public class BrowseProductsJPanel extends javax.swing.JPanel {
             }
         });
 
-        btnCheckOut.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
-        btnCheckOut.setText("Check out");
+        btnCheckOut.setFont(new java.awt.Font("Noto Sans Batak", 0, 12)); // NOI18N
+        btnCheckOut.setText("Check Out");
         btnCheckOut.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCheckOutActionPerformed(evt);
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel1.setText("Add to Cart!!");
+        jLabel1.setFont(new java.awt.Font("Noto Sans Batak", 1, 18)); // NOI18N
+        jLabel1.setText("Add to Cart...");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(23, Short.MAX_VALUE)
+                .addContainerGap(22, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnViewOrderItem)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnRemoveOrderItem)
-                        .addGap(14, 14, 14))
-                    .addComponent(btnCheckOut, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 606, Short.MAX_VALUE)
@@ -250,12 +252,19 @@ public class BrowseProductsJPanel extends javax.swing.JPanel {
                                     .addComponent(txtSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGap(18, 18, 18)
                                     .addComponent(btnSearchProduct)))
-                            .addGap(8, 8, 8))))
-                .addContainerGap(21, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGap(8, 8, 8)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(btnViewOrderItem)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnRemoveOrderItem)
+                        .addGap(14, 14, 14))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(btnCheckOut, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(28, 28, 28))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                        .addGap(225, 225, 225)
+                        .addComponent(jLabel1)))
+                .addContainerGap(22, Short.MAX_VALUE))
         );
 
         layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {spnQuantity, txtSalesPrice});
@@ -265,9 +274,9 @@ public class BrowseProductsJPanel extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGap(17, 17, 17)
                 .addComponent(btnBack)
-                .addGap(23, 23, 23)
+                .addGap(20, 20, 20)
                 .addComponent(jLabel1)
-                .addGap(15, 15, 15)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblSupplier, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(cmbSupplier, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -327,8 +336,8 @@ public class BrowseProductsJPanel extends javax.swing.JPanel {
 
     private void btnCheckOutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCheckOutActionPerformed
         // TODO add your handling code here:
-        business.getMasterOrderList().newOrder(cp,sp,currentOrder);
-        currentOrder = new Order(cp,sp);
+        business.getMasterOrderList().newOrder(customerProfile,salesPersonProfile,currentOrder);
+        currentOrder = new CurrentOrder(customerProfile,salesPersonProfile);
         populateCartTable();
         populateProductTable();
         populateCombo();

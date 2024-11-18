@@ -15,7 +15,7 @@ public class OrderSummary {
     int orderpriceperformance;
     int numberofOrderitemsabovetarget;
     
-public OrderSummary(Order o){
+public OrderSummary(CurrentOrder o){
     salesvolume = o.getOrderTotal();
     totalabovetarget = o.isOrderAboveTotalTarget();
     orderpriceperformance = o.getOrderPricePerformance();

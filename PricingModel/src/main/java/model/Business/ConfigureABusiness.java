@@ -12,7 +12,7 @@ import model.CustomerManagement.CustomerProfile;
 import model.MarketingManagement.MarketingPersonDirectory;
 import model.MarketingManagement.MarketingPersonProfile;
 import model.OrderManagement.MasterOrderList;
-import model.OrderManagement.Order;
+import model.OrderManagement.CurrentOrder;
 import model.OrderManagement.OrderItem;
 import model.Personnel.EmployeeDirectory;
 import model.Personnel.EmployeeProfile;
@@ -144,7 +144,7 @@ public class ConfigureABusiness {
             for(int k=0; k<s.getProductcatalog().getProductList().size();k++){
                 Product p = s.getProductcatalog().getProductList().get(k);
                 for(CustomerProfile cp:customerdirectory.getCustomerlist()){
-                    Order order = mol.newOrder(cp, getRandomSalesman(salesPersonDirectory));
+                    CurrentOrder order = mol.newOrder(cp, getRandomSalesman(salesPersonDirectory));
                     int actualprice = random.nextInt(p.getCeilingPrice()-p.getFloorPrice()+1)+p.getFloorPrice();
                     OrderItem oi1=order.newOrderItem(p, actualprice, random.nextInt(91)+10);
                 }

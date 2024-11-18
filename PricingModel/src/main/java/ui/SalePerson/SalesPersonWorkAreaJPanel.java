@@ -14,20 +14,20 @@ import ui.LoginJPanel;
 
 /**
  *
- * @author prart
+ * @author Shivani
  */
 public class SalesPersonWorkAreaJPanel extends javax.swing.JPanel {
     JPanel mainWorkArea;
     Business business;
-    SalesPersonProfile sp;
+    SalesPersonProfile salesPersonProfile;
     /**
      * Creates new form SalesPersonWorkAreaJPanel
      */
-    public SalesPersonWorkAreaJPanel(JPanel mainWorkArea, Business business, SalesPersonProfile sp) {
+    public SalesPersonWorkAreaJPanel(JPanel mainWorkArea, Business business, SalesPersonProfile salesPersonProfile) {
         initComponents();
         this.mainWorkArea = mainWorkArea;
         this.business = business;
-        this.sp = sp;
+        this.salesPersonProfile = salesPersonProfile;
     }
 
     /**
@@ -48,13 +48,17 @@ public class SalesPersonWorkAreaJPanel extends javax.swing.JPanel {
 
         jSplitPane1.setOrientation(javax.swing.JSplitPane.VERTICAL_SPLIT);
 
-        btnBrowseCatalog.setText("Browse Product Catalog >>");
+        jPanel1.setBackground(new java.awt.Color(219, 247, 255));
+
+        btnBrowseCatalog.setFont(new java.awt.Font("Noto Sans Batak", 0, 12)); // NOI18N
+        btnBrowseCatalog.setText("Browse Product Catalog ");
         btnBrowseCatalog.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBrowseCatalogActionPerformed(evt);
             }
         });
 
+        btnLogout.setFont(new java.awt.Font("Noto Sans Batak", 0, 12)); // NOI18N
         btnLogout.setText("Logout");
         btnLogout.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -62,6 +66,7 @@ public class SalesPersonWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
 
+        jButton1.setFont(new java.awt.Font("Noto Sans Batak", 0, 12)); // NOI18N
         jButton1.setText("New Customer");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -74,13 +79,13 @@ public class SalesPersonWorkAreaJPanel extends javax.swing.JPanel {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(212, Short.MAX_VALUE)
+                .addGap(65, 65, 65)
                 .addComponent(jButton1)
-                .addGap(26, 26, 26)
+                .addGap(65, 65, 65)
                 .addComponent(btnBrowseCatalog)
-                .addGap(18, 18, 18)
+                .addGap(54, 54, 54)
                 .addComponent(btnLogout)
-                .addGap(16, 16, 16))
+                .addContainerGap(119, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -95,6 +100,7 @@ public class SalesPersonWorkAreaJPanel extends javax.swing.JPanel {
 
         jSplitPane1.setTopComponent(jPanel1);
 
+        userProcessContainer.setBackground(new java.awt.Color(219, 247, 255));
         userProcessContainer.setLayout(new java.awt.CardLayout());
         jSplitPane1.setRightComponent(userProcessContainer);
 
@@ -113,7 +119,7 @@ public class SalesPersonWorkAreaJPanel extends javax.swing.JPanel {
     private void btnBrowseCatalogActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBrowseCatalogActionPerformed
         // TODO add your handling code here:
 //        BrowseProductsJPanel bpp = new BrowseProductsJPanel(userProcessContainer,business, sp);
-        CustomerSelectJPanel cswa = new CustomerSelectJPanel(userProcessContainer, business, sp);
+        salesPersonProfile cswa = new salesPersonProfile(userProcessContainer, business, salesPersonProfile);
         userProcessContainer.add("CustomerSelectJPanel", cswa);
         CardLayout layout = (CardLayout)userProcessContainer.getLayout();
         layout.next(userProcessContainer);

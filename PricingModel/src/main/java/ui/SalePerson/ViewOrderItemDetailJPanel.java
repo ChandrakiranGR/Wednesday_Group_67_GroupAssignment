@@ -1,7 +1,4 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package ui.SalePerson;
 
 import java.awt.CardLayout;
@@ -11,7 +8,7 @@ import model.OrderManagement.OrderItem;
 
 /**
  *
- * @author Prarthana
+ * @author Shivani
  */
 public class ViewOrderItemDetailJPanel extends javax.swing.JPanel {
 
@@ -55,35 +52,41 @@ public class ViewOrderItemDetailJPanel extends javax.swing.JPanel {
         lblTotal = new javax.swing.JLabel();
         txtTotal = new javax.swing.JTextField();
 
-        setBackground(new java.awt.Color(240, 240, 240));
+        setBackground(new java.awt.Color(219, 247, 255));
         setPreferredSize(new java.awt.Dimension(650, 600));
 
-        lblTitle.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
-        lblTitle.setText("Order Item Details");
+        lblTitle.setFont(new java.awt.Font("Noto Sans Batak", 0, 18)); // NOI18N
+        lblTitle.setText("Order Item Details...");
 
-        btnBack.setText("<< Back");
+        btnBack.setFont(new java.awt.Font("Noto Sans Batak", 0, 12)); // NOI18N
+        btnBack.setText("Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
             }
         });
 
+        lblProductName.setFont(new java.awt.Font("Noto Sans Batak", 0, 12)); // NOI18N
         lblProductName.setText("Product Name:");
 
         txtProductName.setEditable(false);
 
+        lblProductId.setFont(new java.awt.Font("Noto Sans Batak", 0, 12)); // NOI18N
         lblProductId.setText("Product ID:");
 
         txtProductId.setEditable(false);
 
+        lblPrice.setFont(new java.awt.Font("Noto Sans Batak", 0, 12)); // NOI18N
         lblPrice.setText("Sales Price:");
 
         txtSalesPrice.setEditable(false);
 
+        lblQuantity.setFont(new java.awt.Font("Noto Sans Batak", 0, 12)); // NOI18N
         lblQuantity.setText("Quantity:");
 
         txtQuantity.setEditable(false);
 
+        lblTotal.setFont(new java.awt.Font("Noto Sans Batak", 0, 12)); // NOI18N
         lblTotal.setText("Total:");
 
         txtTotal.setEditable(false);
@@ -95,26 +98,27 @@ public class ViewOrderItemDetailJPanel extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(157, 157, 157)
+                        .addGap(31, 31, 31)
+                        .addComponent(btnBack))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(45, 45, 45)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(lblProductName)
                             .addComponent(lblPrice)
                             .addComponent(lblTotal)
                             .addComponent(lblProductId)
-                            .addComponent(lblQuantity)))
+                            .addComponent(lblQuantity))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(txtProductName, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtSalesPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtProductId, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtQuantity, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(22, 22, 22)
-                        .addComponent(btnBack)))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblTitle)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(txtProductName, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(txtSalesPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(txtTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(txtProductId, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(txtQuantity, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(223, Short.MAX_VALUE))
+                        .addGap(92, 92, 92)
+                        .addComponent(lblTitle)))
+                .addContainerGap(346, Short.MAX_VALUE))
         );
 
         layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {txtProductId, txtProductName, txtQuantity, txtSalesPrice, txtTotal});
@@ -123,10 +127,10 @@ public class ViewOrderItemDetailJPanel extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(23, 23, 23)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnBack)
-                    .addComponent(lblTitle))
-                .addGap(71, 71, 71)
+                .addComponent(btnBack)
+                .addGap(62, 62, 62)
+                .addComponent(lblTitle)
+                .addGap(54, 54, 54)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtProductName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblProductName, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -146,7 +150,7 @@ public class ViewOrderItemDetailJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtTotal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblTotal))
-                .addContainerGap(299, Short.MAX_VALUE))
+                .addContainerGap(243, Short.MAX_VALUE))
         );
 
         layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {txtProductId, txtProductName, txtQuantity, txtSalesPrice, txtTotal});
