@@ -17,7 +17,7 @@ import ui.Admin.ManageSuppliersJPanel;
 
 /**
  *
- * @author gomathyselvamuthiah
+ * @author vish
  */
 public class AddSupplierJPanel extends javax.swing.JPanel {
 
